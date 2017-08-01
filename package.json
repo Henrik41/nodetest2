@@ -1,0 +1,20 @@
+
+{
+  "name": "nodetest2",
+  "version": "1.0.0",
+  "description": "this is a test and we will try to deploy it on my linode server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Henrik41/nodetest2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Henrik41/nodetest2/issues"
+  },
+  "homepage": "https://github.com/Henrik41/nodetest2#readme"
+}
