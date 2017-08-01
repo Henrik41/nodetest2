@@ -1,0 +1,6 @@
+1. mkdir nodetest2
+2. cd nodetest2
+3. Create a github directory
+3. follow instructions ... git init, etc..
+4. npm init
+5.  
