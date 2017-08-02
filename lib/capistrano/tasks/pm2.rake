@@ -1,5 +1,5 @@
 require 'json'
-require 'pry'
+
 
 namespace :pm2 do
   def start_app

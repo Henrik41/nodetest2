@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock "3.8.1"
 
-server '45.79.135.198', port: 22, roles: [:web, :app, :db], primary: true
+server '45.79.135.198', port: 3000
 
 
 set :repo_url,        'git@github.com:Henrik41/nodetest2.git'
