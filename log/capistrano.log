@@ -257,3 +257,8 @@ remote: Compressing objects:   0% (1/258)   [Kremote: Compressing objects:   1
   INFO ---------------------------------------------------------------------------
   INFO [87ecc699] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
  DEBUG [87ecc699] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-01 20:40:56 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e80c6160] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [e80c6160] Command: /usr/bin/env mkdir -p /tmp
