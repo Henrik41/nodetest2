@@ -26,7 +26,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capistrano (~> 3.8.1)
+  capistrano (~> 3.8.2)
   capistrano-bundler (~> 1.1.3)
   capistrano-npm
 
