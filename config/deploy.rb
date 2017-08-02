@@ -27,4 +27,3 @@ namespace :deploy do
   after :publishing, :restart   
 end
 
-after "deploy:update_code", "deploy:install_packages"
