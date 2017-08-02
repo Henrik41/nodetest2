@@ -700,3 +700,214 @@ remote: Total 7 (delta 3), reused 7 (delta 3), pack-reused 0[K
  DEBUG [fa955462] 	
  DEBUG [fa955462] 	  error: missing required argument `file|json|stdin|app_name|pm_id'
  DEBUG [fa955462] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-01 23:26:21 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [47f445bc] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [47f445bc] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-01 23:27:37 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8db634d1] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [8db634d1] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 16:43:06 -0400 cap production deploy:check
+  INFO ---------------------------------------------------------------------------
+  INFO [1c5ce338] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [1c5ce338] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 16:45:37 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [991132af] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [991132af] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 16:46:34 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d463d64e] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [d463d64e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d463d64e] Finished in 0.636 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [cbc94c2c] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [cbc94c2c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [cbc94c2c] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [38b2863c] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [38b2863c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [38b2863c] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [38b2863c] Finished in 0.378 seconds with exit status 0 (successful).
+  INFO [e076679a] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [e076679a] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [e076679a] 	mkdir: cannot create directory ‘/var/www/testnode2’
+ DEBUG [e076679a] 	: Permission denied
+mkdir: 
+ DEBUG [e076679a] 	cannot create directory ‘/var/www/testnode2’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 16:47:29 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [341bf349] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [341bf349] Command: /usr/bin/env mkdir -p /tmp
+  INFO [341bf349] Finished in 0.458 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [ebb82be1] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [ebb82be1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [ebb82be1] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [2047f489] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [2047f489] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [2047f489] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [2047f489] Finished in 0.366 seconds with exit status 0 (successful).
+  INFO [6900186e] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [6900186e] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [6900186e] 	mkdir: cannot create directory ‘/var/www/testnode2’
+ DEBUG [6900186e] 	: Permission denied
+ DEBUG [6900186e] 	mkdir: cannot create directory ‘/var/www/testnode2’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 16:56:24 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d893c481] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [d893c481] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d893c481] Finished in 0.524 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [80d866c2] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [80d866c2] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [80d866c2] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [007b1248] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [007b1248] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [007b1248] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [007b1248] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [3cf0e651] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [3cf0e651] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [3cf0e651] 	mkdir: cannot create directory ‘/var/www/testnode2’
+ DEBUG [3cf0e651] 	: Permission denied
+ DEBUG [3cf0e651] 	mkdir: cannot create directory ‘/var/www/testnode2’: Permission denied
+ DEBUG [3cf0e651] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 17:03:56 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c4c79596] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [c4c79596] Command: /usr/bin/env mkdir -p /tmp
+  INFO [c4c79596] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [6123b562] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [6123b562] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [6123b562] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [ad25df06] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [ad25df06] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [ad25df06] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [ad25df06] Finished in 0.413 seconds with exit status 0 (successful).
+  INFO [8362dc24] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [8362dc24] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [8362dc24] 	mkdir: cannot create directory ‘/var/www/testnode2’
+ DEBUG [8362dc24] 	: Permission denied
+ DEBUG [8362dc24] 	mkdir: cannot create directory ‘/var/www/testnode2’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 17:09:16 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d6359740] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [d6359740] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d6359740] Finished in 0.543 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [fc385e52] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [fc385e52] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [fc385e52] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [18bd330c] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [18bd330c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [18bd330c] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [18bd330c] Finished in 0.373 seconds with exit status 0 (successful).
+  INFO [b2e4e315] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [b2e4e315] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [b2e4e315] 	mkdir: 
+ DEBUG [b2e4e315] 	cannot create directory ‘/var/www/testnode2’
+ DEBUG [b2e4e315] 	: Permission denied
+ DEBUG [b2e4e315] 	
+ DEBUG [b2e4e315] 	mkdir: 
+ DEBUG [b2e4e315] 	cannot create directory ‘/var/www/testnode2’
+ DEBUG [b2e4e315] 	: Permission denied
+ DEBUG [b2e4e315] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 17:11:28 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [57937448] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [57937448] Command: /usr/bin/env mkdir -p /tmp
+  INFO [57937448] Finished in 0.478 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [038194f9] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [038194f9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [038194f9] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [cec42c00] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [cec42c00] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [cec42c00] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [cec42c00] Finished in 0.384 seconds with exit status 0 (successful).
+  INFO [73910fdf] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [73910fdf] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [73910fdf] 	mkdir: 
+ DEBUG [73910fdf] 	cannot create directory ‘/var/www/testnode2’
+ DEBUG [73910fdf] 	: Permission denied
+ DEBUG [73910fdf] 	
+ DEBUG [73910fdf] 	mkdir: 
+ DEBUG [73910fdf] 	cannot create directory ‘/var/www/testnode2’
+ DEBUG [73910fdf] 	: Permission denied
+ DEBUG [73910fdf] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 17:11:52 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [18c6529f] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [18c6529f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [18c6529f] Finished in 0.748 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [0d974961] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [0d974961] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [0d974961] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [13c5f60d] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [13c5f60d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [13c5f60d] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [13c5f60d] Finished in 0.361 seconds with exit status 0 (successful).
+  INFO [cc4c3487] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [cc4c3487] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [cc4c3487] 	mkdir: cannot create directory ‘/var/www/testnode2’
+ DEBUG [cc4c3487] 	: Permission denied
+mkdir: cannot create directory ‘/var/www/testnode2’: Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 17:12:28 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [b2cc509d] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [b2cc509d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [b2cc509d] Finished in 7.979 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [ee3325cf] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [ee3325cf] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [ee3325cf] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [c2712299] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [c2712299] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [c2712299] 	Permission denied (publickey).
+ DEBUG [c2712299] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-02 17:14:00 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f8ab8998] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [f8ab8998] Command: /usr/bin/env mkdir -p /tmp
+  INFO [f8ab8998] Finished in 0.502 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [084e786c] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [084e786c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [084e786c] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [89a7f70c] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [89a7f70c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [89a7f70c] 	67a1cb8c9c01f9498a82b930be1e859f5e19e916	HEAD
+  INFO [89a7f70c] Finished in 1.869 seconds with exit status 0 (successful).
+  INFO [6d59f15a] Running /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases on 45.79.135.198
+ DEBUG [6d59f15a] Command: /usr/bin/env mkdir -p /var/www/testnode2/shared /var/www/testnode2/releases
+ DEBUG [6d59f15a] 	mkdir: cannot create directory ‘/var/www/testnode2’
+ DEBUG [6d59f15a] 	: Permission denied
+mkdir: cannot create directory ‘/var/www/testnode2’: Permission denied
+ DEBUG [6d59f15a] 	
