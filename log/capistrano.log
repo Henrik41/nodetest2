@@ -262,3 +262,125 @@ remote: Compressing objects:   0% (1/258)   [Kremote: Compressing objects:   1
   INFO ---------------------------------------------------------------------------
   INFO [e80c6160] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
  DEBUG [e80c6160] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-01 20:52:10 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [659f82b9] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [659f82b9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [659f82b9] Finished in 1.959 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [9d7cb802] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [9d7cb802] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [9d7cb802] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [25406b6a] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [25406b6a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [25406b6a] 	151f8c7281418a1652de1151b036e7c54e170c7c	HEAD
+  INFO [25406b6a] Finished in 0.377 seconds with exit status 0 (successful).
+  INFO [7160c4d1] Running /usr/bin/env mkdir -p /home/bob/apps/testnode2/shared /home/bob/apps/testnode2/releases on 45.79.135.198
+ DEBUG [7160c4d1] Command: /usr/bin/env mkdir -p /home/bob/apps/testnode2/shared /home/bob/apps/testnode2/releases
+  INFO [7160c4d1] Finished in 0.091 seconds with exit status 0 (successful).
+ DEBUG [cc6428c8] Running [ -f /home/bob/apps/testnode2/current/REVISION ] on 45.79.135.198
+ DEBUG [cc6428c8] Command: [ -f /home/bob/apps/testnode2/current/REVISION ]
+ DEBUG [cc6428c8] Finished in 0.059 seconds with exit status 1 (failed).
+ DEBUG [8217c3e7] Running [ -f /home/bob/apps/testnode2/repo/HEAD ] on 45.79.135.198
+ DEBUG [8217c3e7] Command: [ -f /home/bob/apps/testnode2/repo/HEAD ]
+ DEBUG [8217c3e7] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bob/apps/testnode2/repo
+ DEBUG [545fb1ed] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [545fb1ed] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [545fb1ed] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [9eedb28b] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [9eedb28b] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [9eedb28b] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [e363292b] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [e363292b] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e363292b] 	Fetching origin
+ DEBUG [e363292b] 	remote: Counting objects: 35, done.[K
+remote: Compressing objects:   6% (1/15)   [Kremote: Compressing objects:  13% (2/15)   [Kremote: Compressing objects:  20% (3/15)   [Kremote: Compressing objects:  26% (4/15)   [Kremote: Compressing objects:  33% (5/15)   [Kremote: Compressing objects:  40% (6/15)   [Kremote: Compressing objects:  46% (7/15)   [K
+ DEBUG [e363292b] 	remote: Compressing objects:  53% (8/15)   [Kremote: Compressing objects:  60% (9/15)   [Kremote: Compressing objects:  66% (10/15)   [Kremote: Compressing objects:  73% (11/15)   [Kremote: Compressing objects:  80% (12/15)   [Kremote: Compressing objects:  86% (13/15)   [Kremote: Compressing objects:  93% (14/15)   [K
+ DEBUG [e363292b] 	remote: Compressing objects: 100% (15/15)   [Kremote: Compressing objects: 100% (15/15), done.[K
+remote: Total 35 (delta 15), reused 33 (delta 13), pack-reused 0[K
+ DEBUG [e363292b] 	Unpacking objects:   2% (1/35)   
+ DEBUG [e363292b] 	Unpacking objects:   5% (2/35)   
+ DEBUG [e363292b] 	Unpacking objects:   8% (3/35)   
+ DEBUG [e363292b] 	Unpacking objects:  11% (4/35)   
+ DEBUG [e363292b] 	Unpacking objects:  14% (5/35)   
+ DEBUG [e363292b] 	Unpacking objects:  17% (6/35)   
+ DEBUG [e363292b] 	Unpacking objects:  20% (7/35)   
+ DEBUG [e363292b] 	Unpacking objects:  22% (8/35)   
+ DEBUG [e363292b] 	Unpacking objects:  25% (9/35)   
+ DEBUG [e363292b] 	Unpacking objects:  28% (10/35)   
+ DEBUG [e363292b] 	Unpacking objects:  31% (11/35)   
+ DEBUG [e363292b] 	Unpacking objects:  34% (12/35)   
+ DEBUG [e363292b] 	Unpacking objects:  37% (13/35)   
+ DEBUG [e363292b] 	Unpacking objects:  40% (14/35)   
+ DEBUG [e363292b] 	Unpacking objects:  42% (15/35)   
+ DEBUG [e363292b] 	Unpacking objects:  45% (16/35)   
+ DEBUG [e363292b] 	Unpacking objects:  48% (17/35)   
+ DEBUG [e363292b] 	Unpacking objects:  51% (18/35)   
+ DEBUG [e363292b] 	Unpacking objects:  54% (19/35)   
+ DEBUG [e363292b] 	Unpacking objects:  57% (20/35)   
+ DEBUG [e363292b] 	Unpacking objects:  60% (21/35)   
+ DEBUG [e363292b] 	Unpacking objects:  62% (22/35)   
+ DEBUG [e363292b] 	Unpacking objects:  65% (23/35)   
+ DEBUG [e363292b] 	Unpacking objects:  68% (24/35)   
+ DEBUG [e363292b] 	Unpacking objects:  71% (25/35)   
+ DEBUG [e363292b] 	Unpacking objects:  74% (26/35)   
+ DEBUG [e363292b] 	Unpacking objects:  77% (27/35)   
+ DEBUG [e363292b] 	Unpacking objects:  80% (28/35)   
+ DEBUG [e363292b] 	Unpacking objects:  82% (29/35)   
+ DEBUG [e363292b] 	Unpacking objects:  85% (30/35)   
+ DEBUG [e363292b] 	Unpacking objects:  88% (31/35)   
+ DEBUG [e363292b] 	Unpacking objects:  91% (32/35)   
+ DEBUG [e363292b] 	Unpacking objects:  94% (33/35)   
+ DEBUG [e363292b] 	Unpacking objects:  97% (34/35)   
+ DEBUG [e363292b] 	Unpacking objects: 100% (35/35)   
+ DEBUG [e363292b] 	Unpacking objects: 100% (35/35), done.
+ DEBUG [e363292b] 	From github.com:Henrik41/nodetest2
+   d7c64b2..151f8c7  master     -> master
+  INFO [e363292b] Finished in 0.454 seconds with exit status 0 (successful).
+ DEBUG [bbf08d21] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [bbf08d21] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [bbf08d21] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [7f6bcbbf] Running /usr/bin/env mkdir -p /home/bob/apps/testnode2/releases/20170802005214 on 45.79.135.198
+ DEBUG [7f6bcbbf] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /home/bob/apps/testnode2/releases/20170802005214 )
+  INFO [7f6bcbbf] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [53b536a2] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bob/apps/testnode2/releases/20170802005214 on 45.79.135.198
+ DEBUG [53b536a2] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bob/apps/testnode2/releases/20170802005214 )
+  INFO [53b536a2] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [08a26ba3] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [08a26ba3] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [08a26ba3] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [e913de9f] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [e913de9f] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e913de9f] 	151f8c7281418a1652de1151b036e7c54e170c7c
+ DEBUG [e913de9f] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [0583333e] Running if test ! -d /home/bob/apps/testnode2/releases/20170802005214; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802005214'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [0583333e] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802005214; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802005214'" 1>&2; false; fi
+ DEBUG [0583333e] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [5b545f73] Running /usr/bin/env echo "151f8c7281418a1652de1151b036e7c54e170c7c" >> REVISION on 45.79.135.198
+ DEBUG [5b545f73] Command: cd /home/bob/apps/testnode2/releases/20170802005214 && /usr/bin/env echo "151f8c7281418a1652de1151b036e7c54e170c7c" >> REVISION
+  INFO [5b545f73] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [9387c4ea] Running if test ! -d /home/bob/apps/testnode2/releases/20170802005214; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802005214'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [9387c4ea] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802005214; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802005214'" 1>&2; false; fi
+ DEBUG [9387c4ea] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [e89376fe] Running /usr/bin/env bundle check --path /home/bob/apps/testnode2/shared/bundle on 45.79.135.198
+ DEBUG [e89376fe] Command: cd /home/bob/apps/testnode2/releases/20170802005214 && /usr/bin/env bundle check --path /home/bob/apps/testnode2/shared/bundle
+ DEBUG [e89376fe] 	[31mBundler can't satisfy your Gemfile's dependencies.[0m
+[33mInstall missing gems with `bundle install`.[0m
+ DEBUG [e89376fe] Finished in 0.535 seconds with exit status 1 (failed).
+  INFO [1f138123] Running /usr/bin/env bundle install --path /home/bob/apps/testnode2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [1f138123] Command: cd /home/bob/apps/testnode2/releases/20170802005214 && /usr/bin/env bundle install --path /home/bob/apps/testnode2/shared/bundle --without development test --deployment --quiet
+ DEBUG [1f138123] 	[31mYou are trying to install in deployment mode after changing
+your Gemfile. Run `bundle install` elsewhere and add the
+updated Gemfile.lock to version control.
+
+the dependencies in your gemfile changed
+
+
+You have added to the Gemfile:
+* capistrano (~> 3.8.1)
+
+You have deleted from the Gemfile:
+* capistrano (~> 3.2.0)[0m
