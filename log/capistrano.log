@@ -384,3 +384,211 @@ You have added to the Gemfile:
 
 You have deleted from the Gemfile:
 * capistrano (~> 3.2.0)[0m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-01 21:19:03 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [785789e2] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [785789e2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [785789e2] Finished in 1.177 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [e4835a65] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [e4835a65] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [e4835a65] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [4e4c3a37] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [4e4c3a37] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [4e4c3a37] 	ee455a016f8734311829f9ff3e6e723fd9a71b97	HEAD
+  INFO [4e4c3a37] Finished in 0.383 seconds with exit status 0 (successful).
+  INFO [5cb0f208] Running /usr/bin/env mkdir -p /home/bob/apps/testnode2/shared /home/bob/apps/testnode2/releases on 45.79.135.198
+ DEBUG [5cb0f208] Command: /usr/bin/env mkdir -p /home/bob/apps/testnode2/shared /home/bob/apps/testnode2/releases
+  INFO [5cb0f208] Finished in 0.071 seconds with exit status 0 (successful).
+ DEBUG [f288bad9] Running [ -f /home/bob/apps/testnode2/current/REVISION ] on 45.79.135.198
+ DEBUG [f288bad9] Command: [ -f /home/bob/apps/testnode2/current/REVISION ]
+ DEBUG [f288bad9] Finished in 0.057 seconds with exit status 1 (failed).
+ DEBUG [0d1c6bbd] Running [ -f /home/bob/apps/testnode2/repo/HEAD ] on 45.79.135.198
+ DEBUG [0d1c6bbd] Command: [ -f /home/bob/apps/testnode2/repo/HEAD ]
+ DEBUG [0d1c6bbd] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bob/apps/testnode2/repo
+ DEBUG [062059b3] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [062059b3] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [062059b3] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [869426ae] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [869426ae] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [869426ae] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [d5178afc] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [d5178afc] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [d5178afc] 	Fetching origin
+ DEBUG [d5178afc] 	remote: Counting objects: 16, done.[K
+remote: Compressing objects:  11% (1/9)   [Kremote: Compressing objects:  22% (2/9)   [Kremote: Compressing objects:  33% (3/9)   [Kremote: Compressing objects:  44% (4/9)   [Kremote: Compressing objects:  55% (5/9)   [Kremote: Compressing objects:  66% (6/9)   [Kremote: Compressing objects:  77% (7/9)   [Kremote: Compressing objects:  88% (8/9)   [Kremote: Compressing objects: 100% (9/9)   [Kremote: Compressing objects: 100% (9/9), done.[K
+ DEBUG [d5178afc] 	remote: Total 16 (delta 10), reused 12 (delta 6), pack-reused 0[K
+ DEBUG [d5178afc] 	Unpacking objects:   6% (1/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  12% (2/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  18% (3/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  25% (4/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  31% (5/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  37% (6/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  43% (7/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  50% (8/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  56% (9/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  62% (10/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  68% (11/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  75% (12/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  81% (13/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  87% (14/16)   
+ DEBUG [d5178afc] 	Unpacking objects:  93% (15/16)   
+ DEBUG [d5178afc] 	Unpacking objects: 100% (16/16)   
+ DEBUG [d5178afc] 	Unpacking objects: 100% (16/16), done.
+ DEBUG [d5178afc] 	From github.com:Henrik41/nodetest2
+ DEBUG [d5178afc] 	   151f8c7..ee455a0  master     -> master
+  INFO [d5178afc] Finished in 0.443 seconds with exit status 0 (successful).
+ DEBUG [3f388ac7] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [3f388ac7] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [3f388ac7] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [44f7bb52] Running /usr/bin/env mkdir -p /home/bob/apps/testnode2/releases/20170802011905 on 45.79.135.198
+ DEBUG [44f7bb52] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /home/bob/apps/testnode2/releases/20170802011905 )
+  INFO [44f7bb52] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [21627407] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bob/apps/testnode2/releases/20170802011905 on 45.79.135.198
+ DEBUG [21627407] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bob/apps/testnode2/releases/20170802011905 )
+  INFO [21627407] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [1c85da84] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [1c85da84] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [1c85da84] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [1baa3a2d] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [1baa3a2d] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1baa3a2d] 	ee455a016f8734311829f9ff3e6e723fd9a71b97
+ DEBUG [1baa3a2d] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [7e905836] Running if test ! -d /home/bob/apps/testnode2/releases/20170802011905; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802011905'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [7e905836] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802011905; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802011905'" 1>&2; false; fi
+ DEBUG [7e905836] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [c6003184] Running /usr/bin/env echo "ee455a016f8734311829f9ff3e6e723fd9a71b97" >> REVISION on 45.79.135.198
+ DEBUG [c6003184] Command: cd /home/bob/apps/testnode2/releases/20170802011905 && /usr/bin/env echo "ee455a016f8734311829f9ff3e6e723fd9a71b97" >> REVISION
+  INFO [c6003184] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [11e9fb10] Running if test ! -d /home/bob/apps/testnode2/releases/20170802011905; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802011905'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [11e9fb10] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802011905; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802011905'" 1>&2; false; fi
+ DEBUG [11e9fb10] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [e005167d] Running /usr/bin/env bundle install --path /home/bob/apps/testnode2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [e005167d] Command: cd /home/bob/apps/testnode2/releases/20170802011905 && /usr/bin/env bundle install --path /home/bob/apps/testnode2/shared/bundle --without development test --deployment --quiet
+  INFO [e005167d] Finished in 4.181 seconds with exit status 0 (successful).
+ DEBUG [7abd4581] Running if test ! -d /home/bob/apps/testnode2/releases/20170802011905; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802011905'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [7abd4581] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802011905; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802011905'" 1>&2; false; fi
+ DEBUG [7abd4581] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [672944b7] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [672944b7] Command: cd /home/bob/apps/testnode2/releases/20170802011905 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [672944b7] Finished in 1.175 seconds with exit status 0 (successful).
+  INFO [a42499a0] Running /usr/bin/env ln -s /home/bob/apps/testnode2/releases/20170802011905 /home/bob/apps/testnode2/releases/current on 45.79.135.198
+ DEBUG [a42499a0] Command: /usr/bin/env ln -s /home/bob/apps/testnode2/releases/20170802011905 /home/bob/apps/testnode2/releases/current
+  INFO [a42499a0] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [28b569c3] Running /usr/bin/env mv /home/bob/apps/testnode2/releases/current /home/bob/apps/testnode2 on 45.79.135.198
+ DEBUG [28b569c3] Command: /usr/bin/env mv /home/bob/apps/testnode2/releases/current /home/bob/apps/testnode2
+  INFO [28b569c3] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [11a60006] Running if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [11a60006] Command: if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi
+ DEBUG [11a60006] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [218469e5] Running /usr/bin/env pm2 jlist  on 45.79.135.198
+ DEBUG [218469e5] Command: cd /home/bob/apps/testnode2/current && /usr/bin/env pm2 jlist 
+ DEBUG [218469e5] 	[]
+ DEBUG [218469e5] Finished in 0.433 seconds with exit status 0 (successful).
+  INFO App is not registerd
+ DEBUG [4b0d9ed6] Running if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [4b0d9ed6] Command: if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi
+ DEBUG [4b0d9ed6] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [9ff8644f] Running /usr/bin/env pm2 start  on 45.79.135.198
+ DEBUG [9ff8644f] Command: cd /home/bob/apps/testnode2/current && /usr/bin/env pm2 start 
+ DEBUG [9ff8644f] 	
+ DEBUG [9ff8644f] 	  error: missing required argument `file|json|stdin|app_name|pm_id'
+ DEBUG [9ff8644f] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-01 21:27:40 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [4b0a9070] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [4b0a9070] Command: /usr/bin/env mkdir -p /tmp
+  INFO [4b0a9070] Finished in 0.441 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-testnode2-production-henriknafo.sh 100.0%
+  INFO [3c8c3bf8] Running /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [3c8c3bf8] Command: /usr/bin/env chmod 700 /tmp/git-ssh-testnode2-production-henriknafo.sh
+  INFO [3c8c3bf8] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [65ae865a] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [65ae865a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [65ae865a] 	ee455a016f8734311829f9ff3e6e723fd9a71b97	HEAD
+  INFO [65ae865a] Finished in 0.385 seconds with exit status 0 (successful).
+  INFO [2fe06641] Running /usr/bin/env mkdir -p /home/bob/apps/testnode2/shared /home/bob/apps/testnode2/releases on 45.79.135.198
+ DEBUG [2fe06641] Command: /usr/bin/env mkdir -p /home/bob/apps/testnode2/shared /home/bob/apps/testnode2/releases
+  INFO [2fe06641] Finished in 0.078 seconds with exit status 0 (successful).
+ DEBUG [6df96ea3] Running [ -f /home/bob/apps/testnode2/current/REVISION ] on 45.79.135.198
+ DEBUG [6df96ea3] Command: [ -f /home/bob/apps/testnode2/current/REVISION ]
+ DEBUG [6df96ea3] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [6b040e14] Running /usr/bin/env cat /home/bob/apps/testnode2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [6b040e14] Command: /usr/bin/env cat /home/bob/apps/testnode2/current/REVISION 2>/dev/null
+ DEBUG [6b040e14] 	ee455a016f8734311829f9ff3e6e723fd9a71b97
+ DEBUG [6b040e14] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [618fdf12] Running [ -f /home/bob/apps/testnode2/repo/HEAD ] on 45.79.135.198
+ DEBUG [618fdf12] Command: [ -f /home/bob/apps/testnode2/repo/HEAD ]
+ DEBUG [618fdf12] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/bob/apps/testnode2/repo
+ DEBUG [8ae7bfc6] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [8ae7bfc6] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [8ae7bfc6] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [ea4066b7] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [ea4066b7] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [ea4066b7] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [e658b112] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [e658b112] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e658b112] 	Fetching origin
+  INFO [e658b112] Finished in 0.376 seconds with exit status 0 (successful).
+ DEBUG [2b7c75cd] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [2b7c75cd] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [2b7c75cd] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [aab9de97] Running /usr/bin/env mkdir -p /home/bob/apps/testnode2/releases/20170802012742 on 45.79.135.198
+ DEBUG [aab9de97] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /home/bob/apps/testnode2/releases/20170802012742 )
+  INFO [aab9de97] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [4ad444f4] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bob/apps/testnode2/releases/20170802012742 on 45.79.135.198
+ DEBUG [4ad444f4] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/bob/apps/testnode2/releases/20170802012742 )
+  INFO [4ad444f4] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [797b688d] Running if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [797b688d] Command: if test ! -d /home/bob/apps/testnode2/repo; then echo "Directory does not exist '/home/bob/apps/testnode2/repo'" 1>&2; false; fi
+ DEBUG [797b688d] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [26d2e4b2] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [26d2e4b2] Command: cd /home/bob/apps/testnode2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-testnode2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [26d2e4b2] 	ee455a016f8734311829f9ff3e6e723fd9a71b97
+ DEBUG [26d2e4b2] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [21e0b06b] Running if test ! -d /home/bob/apps/testnode2/releases/20170802012742; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802012742'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [21e0b06b] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802012742; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802012742'" 1>&2; false; fi
+ DEBUG [21e0b06b] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [eb6eebec] Running /usr/bin/env echo "ee455a016f8734311829f9ff3e6e723fd9a71b97" >> REVISION on 45.79.135.198
+ DEBUG [eb6eebec] Command: cd /home/bob/apps/testnode2/releases/20170802012742 && /usr/bin/env echo "ee455a016f8734311829f9ff3e6e723fd9a71b97" >> REVISION
+  INFO [eb6eebec] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [f27e26c6] Running if test ! -d /home/bob/apps/testnode2/releases/20170802012742; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802012742'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [f27e26c6] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802012742; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802012742'" 1>&2; false; fi
+ DEBUG [f27e26c6] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [94754905] Running /usr/bin/env bundle install --path /home/bob/apps/testnode2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [94754905] Command: cd /home/bob/apps/testnode2/releases/20170802012742 && /usr/bin/env bundle install --path /home/bob/apps/testnode2/shared/bundle --without development test --deployment --quiet
+  INFO [94754905] Finished in 0.461 seconds with exit status 0 (successful).
+ DEBUG [d67d4874] Running if test ! -d /home/bob/apps/testnode2/releases/20170802012742; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802012742'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [d67d4874] Command: if test ! -d /home/bob/apps/testnode2/releases/20170802012742; then echo "Directory does not exist '/home/bob/apps/testnode2/releases/20170802012742'" 1>&2; false; fi
+ DEBUG [d67d4874] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [f8aa5f1c] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [f8aa5f1c] Command: cd /home/bob/apps/testnode2/releases/20170802012742 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [f8aa5f1c] Finished in 1.175 seconds with exit status 0 (successful).
+  INFO [b2c08a8b] Running /usr/bin/env ln -s /home/bob/apps/testnode2/releases/20170802012742 /home/bob/apps/testnode2/releases/current on 45.79.135.198
+ DEBUG [b2c08a8b] Command: /usr/bin/env ln -s /home/bob/apps/testnode2/releases/20170802012742 /home/bob/apps/testnode2/releases/current
+  INFO [b2c08a8b] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [5e287729] Running /usr/bin/env mv /home/bob/apps/testnode2/releases/current /home/bob/apps/testnode2 on 45.79.135.198
+ DEBUG [5e287729] Command: /usr/bin/env mv /home/bob/apps/testnode2/releases/current /home/bob/apps/testnode2
+  INFO [5e287729] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [7021be2d] Running if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [7021be2d] Command: if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi
+ DEBUG [7021be2d] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [57cf6e27] Running /usr/bin/env pm2 jlist  on 45.79.135.198
+ DEBUG [57cf6e27] Command: cd /home/bob/apps/testnode2/current && /usr/bin/env pm2 jlist 
+ DEBUG [57cf6e27] 	[]
+ DEBUG [57cf6e27] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO App is not registerd
+ DEBUG [e009945c] Running if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [e009945c] Command: if test ! -d /home/bob/apps/testnode2/current; then echo "Directory does not exist '/home/bob/apps/testnode2/current'" 1>&2; false; fi
+ DEBUG [e009945c] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [509d5c13] Running /usr/bin/env pm2 start  on 45.79.135.198
+ DEBUG [509d5c13] Command: cd /home/bob/apps/testnode2/current && /usr/bin/env pm2 start 
+ DEBUG [509d5c13] 	
+ DEBUG [509d5c13] 	  error: missing required argument `file|json|stdin|app_name|pm_id'
+ DEBUG [509d5c13] 	

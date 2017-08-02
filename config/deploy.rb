@@ -1,5 +1,5 @@
 # config valid only for current version of Capistrano
-lock "3.8.1"
+lock "3.8.2"
 
 server '45.79.135.198', port: 22, roles: [:web, :app], primary: true
 
@@ -19,6 +19,11 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 
 namespace :deploy do
 
+  desc 'start application'
+  task :start do
+    invoke 'pm2:start'
+  end
+  
   desc 'Restart application'
   task :restart do
     invoke 'pm2:restart'
