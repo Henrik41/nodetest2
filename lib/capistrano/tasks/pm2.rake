@@ -4,13 +4,13 @@ require 'json'
 namespace :pm2 do
   def start_app
     within current_path do
-      execute :pm2, :start, fetch(:app_command)
+      execute :pm2, :start, fetch(:app_command) + 'index.js'
     end
   end
 
   def restart_app
     within current_path do
-      execute :pm2, :restart, fetch(:app_command)
+      execute :pm2, :restart, fetch(:app_command) + 'index.js'
     end
   end
 
@@ -40,7 +40,7 @@ namespace :pm2 do
 
   def app_status
     within current_path do
-      ps = JSON.parse(capture :pm2, :jlist, fetch(:app_command))
+      ps = JSON.parse(capture :pm2, :index, fetch(:app_command))
       if ps.empty?
         return nil
       else
