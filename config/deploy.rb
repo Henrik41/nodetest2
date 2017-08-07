@@ -17,18 +17,15 @@ set :deploy_to,       "/var/www/nodetest2"
 
 set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/id_rsa.pub) }
 
-namespace :deploy do
 
-  desc 'start application'
-  task :start do
-    invoke 'pm2:start'
-  end
-  
+namespace :deploy do
   desc 'Restart application'
   task :restart do
+    # invoke 'npm:install'
     invoke 'pm2:restart'
   end
 
-  after :publishing, :restart   
+  after :publishing, :restart
 end
+
 

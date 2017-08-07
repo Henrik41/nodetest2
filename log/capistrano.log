@@ -3586,3 +3586,1128 @@ Command not found
  DEBUG [dd32c822] 	    $ pm2 deploy help
  DEBUG [dd32c822] 	
  DEBUG [dd32c822] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-06 22:06:55 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7d1d16bd] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [7d1d16bd] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7d1d16bd] Finished in 0.513 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [51f2ac77] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [51f2ac77] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [51f2ac77] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [416b6f8c] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [416b6f8c] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [416b6f8c] 	efe6299d852de72dee2fbf4eef13da62f0013bda	HEAD
+  INFO [416b6f8c] Finished in 0.373 seconds with exit status 0 (successful).
+  INFO [36ff8017] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [36ff8017] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [36ff8017] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [ac52dab2] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [ac52dab2] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [ac52dab2] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [0afbb25f] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [0afbb25f] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [0afbb25f] 	3883f8ef808297f64dcfd9b64c1ed67e5c69622c
+ DEBUG [0afbb25f] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [290e23e4] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [290e23e4] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [290e23e4] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [6df6f9b8] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [6df6f9b8] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [6df6f9b8] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [a84760fc] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [a84760fc] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [a84760fc] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [0bb78125] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [0bb78125] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0bb78125] 	Fetching origin
+ DEBUG [0bb78125] 	remote: Counting objects: 10, done.[K
+remote: Compressing objects:  50% (1/2)   [Kremote: Compressing objects: 100% (2/2)   [Kremote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [0bb78125] 	Unpacking objects:  10% (1/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  20% (2/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  30% (3/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  40% (4/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  50% (5/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  60% (6/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  70% (7/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  80% (8/10)   
+ DEBUG [0bb78125] 	Unpacking objects:  90% (9/10)   
+ DEBUG [0bb78125] 	Unpacking objects: 100% (10/10)   
+ DEBUG [0bb78125] 	Unpacking objects: 100% (10/10), done.
+ DEBUG [0bb78125] 	remote: Total 10 (delta 4), reused 10 (delta 4), pack-reused 0[K
+ DEBUG [0bb78125] 	From github.com:Henrik41/nodetest2
+ DEBUG [0bb78125] 	   3883f8e..efe6299  master     -> master
+  INFO [0bb78125] Finished in 0.484 seconds with exit status 0 (successful).
+ DEBUG [4b10712b] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [4b10712b] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [4b10712b] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [eb47ac01] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807020657 on 45.79.135.198
+ DEBUG [eb47ac01] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807020657 )
+  INFO [eb47ac01] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [b7331779] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807020657 on 45.79.135.198
+ DEBUG [b7331779] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807020657 )
+  INFO [b7331779] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [e5053f7b] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [e5053f7b] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [e5053f7b] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [9c2359bd] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [9c2359bd] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9c2359bd] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [9c2359bd] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [60ce398c] Running if test ! -d /var/www/nodetest2/releases/20170807020657; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807020657'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [60ce398c] Command: if test ! -d /var/www/nodetest2/releases/20170807020657; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807020657'" 1>&2; false; fi
+ DEBUG [60ce398c] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [fe2d51d4] Running /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION on 45.79.135.198
+ DEBUG [fe2d51d4] Command: cd /var/www/nodetest2/releases/20170807020657 && /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION
+  INFO [fe2d51d4] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [6807187e] Running if test ! -d /var/www/nodetest2/releases/20170807020657; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807020657'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [6807187e] Command: if test ! -d /var/www/nodetest2/releases/20170807020657; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807020657'" 1>&2; false; fi
+ DEBUG [6807187e] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [52048ea7] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [52048ea7] Command: cd /var/www/nodetest2/releases/20170807020657 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [52048ea7] Finished in 0.571 seconds with exit status 0 (successful).
+ DEBUG [90b7be13] Running if test ! -d /var/www/nodetest2/releases/20170807020657; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807020657'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [90b7be13] Command: if test ! -d /var/www/nodetest2/releases/20170807020657; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807020657'" 1>&2; false; fi
+ DEBUG [90b7be13] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [322bb38d] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [322bb38d] Command: cd /var/www/nodetest2/releases/20170807020657 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [322bb38d] Finished in 1.039 seconds with exit status 0 (successful).
+  INFO [7b3b0267] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807020657 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [7b3b0267] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807020657 /var/www/nodetest2/releases/current
+  INFO [7b3b0267] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [9176d865] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [9176d865] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [9176d865] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [d41fa8f4] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [d41fa8f4] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [d41fa8f4] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [ac9eb904] Running /usr/bin/env pm2 index  on 45.79.135.198
+ DEBUG [ac9eb904] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 index 
+ DEBUG [ac9eb904] 	[32m[PM2] [39m
+Command not found
+ DEBUG [ac9eb904] 	
+  Usage: pm2 [cmd] app
+
+
+  Options:
+
+    -V, --version                    output the version number
+    -v --version                     get version
+    -s --silent                      hide all messages
+    -m --mini-list                   display a compacted list without formatting
+    -f --force                       force actions
+    --disable-logs                   do not write logs
+    -n --name <name>                 set a <name> for script
+    -i --instances <number>          launch [number] instances (for networked app)(load balanced)
+    --parallel <number>              mumber of parallel actions (for restart/reload)
+    -l --log [path]                  specify entire log file (error and out are both included)
+    -o --output <path>               specify out log file
+    -e --error <path>                specify error log file
+    -p --pid <pid>                   specify pid file
+    -k --kill-timeout <delay>        delay before sending final SIGKILL signal to process
+    --listen-timeout <delay>         listen timeout on application reload
+    --max-memory-restart <memory>    specify max memory amount used to autorestart (in octet or use syntax like 100M)
+    --restart-delay <delay>          specify a delay between restarts (in milliseconds)
+    --env <environment_name>         specify environment to get specific env variables (for JSON declaration)
+    --log-type <type>                specify log output style (raw by default, json optional)
+    -x --execute-command             execute a program using fork system
+    --max-restarts [count]           only restart the script COUNT times
+    -u --user <username>             define user when generating startup script
+    --uid <uid>                      run target script with <uid> rights
+    --gid <gid>                      run target script with <gid> rights
+    --cwd <path>                     run target script as <username>
+    --hp <home path>                 define home path when generating startup script
+    -c --cron <cron_pattern>         restart a running process based on a cron pattern
+    -w --write                       write configuration in local folder
+    --interpreter <interpreter>      the interpreter pm2 should use for executing app (bash, python...)
+    --interpreter-args <arguments>   interpret options (alias of --node-args)
+    --log-date-format <date format>  add custom prefix timestamp to logs
+    --no-daemon                      run pm2 daemon in the foreground if it doesn't exist already
+    -a --update-env                  update environmnent on restart/reload (-a <=> apply)
+    --source-map-support             force source map support
+    --only <application-name>        with json declaration, allow to only act on one application
+    --disable-source-map-support     force source map support
+    --wait-ready                     ask pm2 to wait for ready event from your app
+    --merge-logs                     merge logs from different instances but keep error and out separated
+    --watch [paths]                  watch application folder for changes
+    --ignore-watch <folders|files>   folder/files to be ignored watching, chould be a specific name or regex - e.g. --ignore-watch="test node_modules "some scripts""
+    --node-args <node_args>          space delimited arguments to pass to node in cluster mode - e.g. --node-args="--debug=7001 --trace-deprecation"
+    --no-color                       skip colors
+    --no-vizion                      start an app without vizion feature (versioning control)
+    --no-autorestart                 start an app without automatic restart
+    --no-treekill                    Only kill the main process, not detached children
+    --no-pmx                         start an app without pmx
+    --no-automation                  start an app without pmx
+    --trace                          enable transaction tracing with km
+    --disable-trace                  disable transaction tracing with km
+    --attach                         attach logging after yo
+ DEBUG [ac9eb904] 	ur start/restart/stop/reload
+    -h, --help                       output usage information
+
+
+  Commands:
+
+    start [options] <file|json|stdin|app_name|pm_id...>  start and daemonize an app
+    docker:gen [options] <file|config>                   generate Dockerfile in current folder
+    docker:dev [options] <file|config>                   wrap application into Docker container
+    docker:dist [options] <file|config> <image_name>     wrap application into Docker container
+    trigger <proc_name> <action_name> [params]           deploy your json
+    deploy <file|environment>                            deploy your json
+    startOrRestart <json>                                start or restart JSON file
+    startOrReload <json>                                 start or gracefully reload JSON file
+    startOrGracefulReload <json>                         start or gracefully reload JSON file
+    stop [options] <id|name|all|json|stdin...>           stop a process (to start it again, do pm2 restart <app>)
+    restart [options] <id|name|all|json|stdin...>        restart a process
+    scale <app_name> <number>                            scale up/down a process in cluster mode depending on total_number param
+    snapshot                                             snapshot PM2 memory
+    profile <command>                                    profile CPU
+    reload <name|all>                                    reload processes (note that its for app using HTTP/HTTPS)
+    gracefulReload <name|all>                            gracefully reload a process. Send a "shutdown" message to close all connections.
+    id <name>                                            get process id by name
+    delete <name|id|script|all|json|stdin...>            stop and delete a process from pm2 process list
+    sendSignal <signal> <pm2_id|name>                    send a system signal to the target process
+    ping                                                 ping pm2 daemon - if not up it will launch it
+    updatePM2                                            update in-memory PM2 with local PM2
+    update                                               (alias) update in-memory PM2 with local PM2
+    install|module:install <module|git:/>                install or update a module and run it forever
+    module:update <module|git:/>                         update a module and run it forever
+    module:generate [app_name]                           Generate a sample module in current folder
+    uninstall|module:uninstall <module>                  stop and uninstall a module
+    publish|module:publish                               Publish the module you are currently on
+    set [key] [value]                                    sets the specified config <key> <value>
+    multiset <value>                                     multiset eg "key1 val1 key2 val2
+    get [key]                                            get value for <key>
+    conf [key] [value]                                   get / set module config values
+    config <key> [value]                                 get / set module config values
+    unset <key>                                          clears the specified config <key>
+    report                                               give a full pm2 report for https://github.com/Unitech/pm2/issues
+    link|interact [options] [secret] [public] [name]     linking action to keymetrics.io - command can be stop|info|delete|restart
+    unmonitor [name]                                     unmonitor target process
+    monitor [name]                                       monitor target process
+    open                                                 open dashboard in browser
+    register                                             create an account on keymetrics
+    login                                                login to keymetrics and link current PM2
+    web                                                  launch a health API on 0.0.0.0:9615
+    dump|save                                            dump all 
+ DEBUG [ac9eb904] 	processes for resurrecting them later
+    send <pm_id> <line>                                  send stdin to <pm_id>
+    attach <pm_id> [comman]                              attach stdin/stdout to application identified by <pm_id>
+    resurrect                                            resurrect previously dumped processes
+    unstartup [platform]                                 disable and clear auto startup - [platform]=systemd,upstart,launchd,rcd
+    startup [platform]                                   setup script for pm2 at boot - [platform]=systemd,upstart,launchd,rcd
+    logrotate                                            copy default logrotate configuration
+    ecosystem|generate [mode]                            generate a process conf file. (mode = null or simple)
+    reset <name|id|all>                                  reset counters for process
+    describe <id>                                        describe all parameters of a process id
+    desc <id>                                            (alias) describe all parameters of a process id
+    info <id>                                            (alias) describe all parameters of a process id
+    show <id>                                            (alias) describe all parameters of a process id
+    list|ls [options]                                    list all processes
+    l                                                    (alias) list all processes
+    status                                               (alias) list all processes
+    jlist                                                list all processes in JSON format
+    prettylist                                           print json in a prettified JSON
+    monit                                                launch termcaps monitoring
+    imonit                                               launch legacy termcaps monitoring
+    dashboard|dash                                       launch dashboard with monitoring and logs
+    flush                                                flush logs
+    reloadLogs                                           reload all logs
+    logs [options] [id|name]                             stream logs file. Default stream all logs
+    kill                                                 kill daemon
+    pull <name> [commit_id]                              updates repository for a given app
+    forward <name>                                       updates repository to the next commit for a given app
+    backward <name>                                      downgrades repository to the previous commit for a given app
+    gc                                                   force PM2 to trigger garbage collection
+    deepUpdate                                           performs a deep update of PM2
+    serve|expose [path] [port]                           serve a directory over http via port
+    *                                                  
+ DEBUG [ac9eb904] 	  Basic Examples:
+
+    Start an app using all CPUs available + set a name :
+    $ pm2 start app.js -i 0 --name "api"
+ DEBUG [ac9eb904] 	
+    Restart the previous app launched, by name :
+ DEBUG [ac9eb904] 	    $ pm2 restart api
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    Stop the app :
+ DEBUG [ac9eb904] 	    $ pm2 stop api
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    Restart the app that is stopped :
+ DEBUG [ac9eb904] 	    $ pm2 restart api
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    Remove the app from the process list :
+ DEBUG [ac9eb904] 	    $ pm2 delete api
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    Kill daemon pm2 :
+ DEBUG [ac9eb904] 	    $ pm2 kill
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    Update pm2 :
+ DEBUG [ac9eb904] 	    $ npm install pm2@latest -g ; pm2 update
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    More examples in https://github.com/Unitech/pm2#usagefeatures
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	  Deployment help:
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	    $ pm2 deploy help
+ DEBUG [ac9eb904] 	
+ DEBUG [ac9eb904] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-06 22:26:54 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [119338f0] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [119338f0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [119338f0] Finished in 0.639 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [926c7c15] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [926c7c15] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [926c7c15] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [5b3baf38] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [5b3baf38] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [5b3baf38] 	efe6299d852de72dee2fbf4eef13da62f0013bda	HEAD
+  INFO [5b3baf38] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO [22320dd1] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [22320dd1] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [22320dd1] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [ff209e7a] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [ff209e7a] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [ff209e7a] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [0427d5ba] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [0427d5ba] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [0427d5ba] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [0427d5ba] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [c805a271] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [c805a271] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [c805a271] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [6099faab] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [6099faab] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [6099faab] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [0166612e] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [0166612e] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [0166612e] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [5ab2fcc5] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [5ab2fcc5] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [5ab2fcc5] 	Fetching origin
+  INFO [5ab2fcc5] Finished in 0.382 seconds with exit status 0 (successful).
+ DEBUG [10204d36] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [10204d36] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [10204d36] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [792c1f16] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807022655 on 45.79.135.198
+ DEBUG [792c1f16] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807022655 )
+  INFO [792c1f16] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [902a7292] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807022655 on 45.79.135.198
+ DEBUG [902a7292] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807022655 )
+  INFO [902a7292] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [cd2ca610] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [cd2ca610] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [cd2ca610] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [1b752c45] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [1b752c45] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1b752c45] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [1b752c45] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [6a6413b0] Running if test ! -d /var/www/nodetest2/releases/20170807022655; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807022655'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [6a6413b0] Command: if test ! -d /var/www/nodetest2/releases/20170807022655; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807022655'" 1>&2; false; fi
+ DEBUG [6a6413b0] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [b223844a] Running /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION on 45.79.135.198
+ DEBUG [b223844a] Command: cd /var/www/nodetest2/releases/20170807022655 && /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION
+  INFO [b223844a] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [66827318] Running if test ! -d /var/www/nodetest2/releases/20170807022655; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807022655'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [66827318] Command: if test ! -d /var/www/nodetest2/releases/20170807022655; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807022655'" 1>&2; false; fi
+ DEBUG [66827318] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [663515a2] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [663515a2] Command: cd /var/www/nodetest2/releases/20170807022655 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [663515a2] Finished in 0.428 seconds with exit status 0 (successful).
+ DEBUG [d1864c65] Running if test ! -d /var/www/nodetest2/releases/20170807022655; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807022655'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [d1864c65] Command: if test ! -d /var/www/nodetest2/releases/20170807022655; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807022655'" 1>&2; false; fi
+ DEBUG [d1864c65] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [e6018831] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [e6018831] Command: cd /var/www/nodetest2/releases/20170807022655 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [e6018831] Finished in 1.080 seconds with exit status 0 (successful).
+  INFO [1ed40ec9] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807022655 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [1ed40ec9] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807022655 /var/www/nodetest2/releases/current
+  INFO [1ed40ec9] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [cf7e5606] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [cf7e5606] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [cf7e5606] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [c823ed09] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [c823ed09] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [c823ed09] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [184cb776] Running /usr/bin/env pm2 index  on 45.79.135.198
+ DEBUG [184cb776] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 index 
+ DEBUG [184cb776] 	[32m[PM2] [39m
+Command not found
+ DEBUG [184cb776] 	
+  Usage: pm2 [cmd] app
+
+
+  Options:
+
+    -V, --version                    output the version number
+    -v --version                     get version
+    -s --silent                      hide all messages
+    -m --mini-list                   display a compacted list without formatting
+    -f --force                       force actions
+    --disable-logs                   do not write logs
+    -n --name <name>                 set a <name> for script
+    -i --instances <number>          launch [number] instances (for networked app)(load balanced)
+    --parallel <number>              mumber of parallel actions (for restart/reload)
+    -l --log [path]                  specify entire log file (error and out are both included)
+    -o --output <path>               specify out log file
+    -e --error <path>                specify error log file
+    -p --pid <pid>                   specify pid file
+    -k --kill-timeout <delay>        delay before sending final SIGKILL signal to process
+    --listen-timeout <delay>         listen timeout on application reload
+    --max-memory-restart <memory>    specify max memory amount used to autorestart (in octet or use syntax like 100M)
+    --restart-delay <delay>          specify a delay between restarts (in milliseconds)
+    --env <environment_name>         specify environment to get specific env variables (for JSON declaration)
+    --log-type <type>                specify log output style (raw by default, json optional)
+    -x --execute-command             execute a program using fork system
+    --max-restarts [count]           only restart the script COUNT times
+    -u --user <username>             define user when generating startup script
+    --uid <uid>                      run target script with <uid> rights
+    --gid <gid>                      run target script with <gid> rights
+    --cwd <path>                     run target script as <username>
+    --hp <home path>                 define home path when generating startup script
+    -c --cron <cron_pattern>         restart 
+ DEBUG [184cb776] 	a running process based on a cron pattern
+    -w --write                       write configuration in local folder
+    --interpreter <interpreter>      the interpreter pm2 should use for executing app (bash, python...)
+    --interpreter-args <arguments>   interpret options (alias of --node-args)
+    --log-date-format <date format>  add custom prefix timestamp to logs
+    --no-daemon                      run pm2 daemon in the foreground if it doesn't exist already
+    -a --update-env                  update environmnent on restart/reload (-a <=> apply)
+    --source-map-support             force source map support
+    --only <application-name>        with json declaration, allow to only act on one application
+    --disable-source-map-support     force source map support
+    --wait-ready                     ask pm2 to wait for ready event from your app
+    --merge-logs                     merge logs from different instances but keep error and out separated
+    --watch [paths]                  watch application folder for changes
+    --ignore-watch <folders|files>   folder/files to be ignored watching, chould be a specific name or regex - e.g. --ignore-watch="test node_modules "some scripts""
+    --node-args <node_args>          space delimited arguments to pass to node in cluster mode - e.g. --node-args="--debug=7001 --trace-deprecation"
+    --no-color                       skip colors
+    --no-vizion                      start an app without vizion feature (versioning control)
+    --no-autorestart                 start an app without automatic restart
+    --no-treekill                    Only kill the main process, not detached children
+    --no-pmx                         start an app without pmx
+    --no-automation                  start an app without pmx
+    --trace                          enable transaction tracing with km
+    --disable-trace                  disable transaction tracing with km
+    --attach                         attach logging after your start/restart/stop/reload
+    -h, --help             
+ DEBUG [184cb776] 	          output usage information
+
+
+  Commands:
+
+    start [options] <file|json|stdin|app_name|pm_id...>  start and daemonize an app
+    docker:gen [options] <file|config>                   generate Dockerfile in current folder
+    docker:dev [options] <file|config>                   wrap application into Docker container
+    docker:dist [options] <file|config> <image_name>     wrap application into Docker container
+    trigger <proc_name> <action_name> [params]           deploy your json
+    deploy <file|environment>                            deploy your json
+    startOrRestart <json>                                start or restart JSON file
+    startOrReload <json>                                 start or gracefully reload JSON file
+    startOrGracefulReload <json>                         start or gracefully reload JSON file
+    stop [options] <id|name|all|json|stdin...>           stop a process (to start it again, do pm2 restart <app>)
+    restart [options] <id|name|all|json|stdin...>        restart a process
+    scale <app_name> <number>                            scale up/down a process in cluster mode depending on total_number param
+    snapshot                                             snapshot PM2 memory
+    profile <command>                                    profile CPU
+    reload <name|all>                                    reload processes (note that its for app using HTTP/HTTPS)
+    gracefulReload <name|all>                            gracefully reload a process. Send a "shutdown" message to close all connections.
+    id <name>                                            get process id by name
+    delete <name|id|script|all|json|stdin...>            stop and delete a process from pm2 process list
+    sendSignal <signal> <pm2_id|name>                    send a system signal to the target process
+    ping                                                 ping pm2 daemon - if not up it will launch it
+    updatePM2                                            update in-memory PM2 with local PM2
+    updat
+ DEBUG [184cb776] 	e                                               (alias) update in-memory PM2 with local PM2
+    install|module:install <module|git:/>                install or update a module and run it forever
+    module:update <module|git:/>                         update a module and run it forever
+    module:generate [app_name]                           Generate a sample module in current folder
+    uninstall|module:uninstall <module>                  stop and uninstall a module
+    publish|module:publish                               Publish the module you are currently on
+    set [key] [value]                                    sets the specified config <key> <value>
+    multiset <value>                                     multiset eg "key1 val1 key2 val2
+    get [key]                                            get value for <key>
+    conf [key] [value]                                   get / set module config values
+    config <key> [value]                                 get / set module config values
+    unset <key>                                          clears the specified config <key>
+    report                                               give a full pm2 report for https://github.com/Unitech/pm2/issues
+    link|interact [options] [secret] [public] [name]     linking action to keymetrics.io - command can be stop|info|delete|restart
+    unmonitor [name]                                     unmonitor target process
+    monitor [name]                                       monitor target process
+    open                                                 open dashboard in browser
+    register                                             create an account on keymetrics
+    login                                                login to keymetrics and link current PM2
+    web                                                  launch a health API on 0.0.0.0:9615
+    dump|save                                            dump all processes for resurrecting them later
+    send <pm_id> <line>                                  send stdi
+ DEBUG [184cb776] 	n to <pm_id>
+    attach <pm_id> [comman]                              attach stdin/stdout to application identified by <pm_id>
+    resurrect                                            resurrect previously dumped processes
+    unstartup [platform]                                 disable and clear auto startup - [platform]=systemd,upstart,launchd,rcd
+    startup [platform]                                   setup script for pm2 at boot - [platform]=systemd,upstart,launchd,rcd
+    logrotate                                            copy default logrotate configuration
+    ecosystem|generate [mode]                            generate a process conf file. (mode = null or simple)
+    reset <name|id|all>                                  reset counters for process
+    describe <id>                                        describe all parameters of a process id
+    desc <id>                                            (alias) describe all parameters of a process id
+    info <id>                                            (alias) describe all parameters of a process id
+    show <id>                                            (alias) describe all parameters of a process id
+    list|ls [options]                                    list all processes
+    l                                                    (alias) list all processes
+    status                                               (alias) list all processes
+    jlist                                                list all processes in JSON format
+    prettylist                                           print json in a prettified JSON
+    monit                                                launch termcaps monitoring
+    imonit                                               launch legacy termcaps monitoring
+    dashboard|dash                                       launch dashboard with monitoring and logs
+    flush                                                flush logs
+    reloadLogs                                           reload all logs
+    logs [options] [id|name]  
+ DEBUG [184cb776] 	                           stream logs file. Default stream all logs
+    kill                                                 kill daemon
+    pull <name> [commit_id]                              updates repository for a given app
+    forward <name>                                       updates repository to the next commit for a given app
+    backward <name>                                      downgrades repository to the previous commit for a given app
+    gc                                                   force PM2 to trigger garbage collection
+    deepUpdate                                           performs a deep update of PM2
+    serve|expose [path] [port]                           serve a directory over http via port
+    *                                                  
+ DEBUG [184cb776] 	  Basic Examples:
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Start an app using all CPUs available + set a name :
+ DEBUG [184cb776] 	    $ pm2 start app.js -i 0 --name "api"
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Restart the previous app launched, by name :
+ DEBUG [184cb776] 	    $ pm2 restart api
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Stop the app :
+ DEBUG [184cb776] 	    $ pm2 stop api
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Restart the app that is stopped :
+ DEBUG [184cb776] 	    $ pm2 restart api
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Remove the app from the process list :
+ DEBUG [184cb776] 	    $ pm2 delete api
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Kill daemon pm2 :
+ DEBUG [184cb776] 	    $ pm2 kill
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    Update pm2 :
+ DEBUG [184cb776] 	    $ npm install pm2@latest -g ; pm2 update
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    More examples in https://github.com/Unitech/pm2#usagefeatures
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	  Deployment help:
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	    $ pm2 deploy help
+ DEBUG [184cb776] 	
+ DEBUG [184cb776] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-06 22:58:22 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1bacfb50] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [1bacfb50] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1bacfb50] Finished in 0.710 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [748f03fb] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [748f03fb] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [748f03fb] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [77aef52a] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [77aef52a] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [77aef52a] 	efe6299d852de72dee2fbf4eef13da62f0013bda	HEAD
+  INFO [77aef52a] Finished in 0.380 seconds with exit status 0 (successful).
+  INFO [371df2c7] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [371df2c7] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [371df2c7] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [44fbfb16] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [44fbfb16] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [44fbfb16] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [a2e04643] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [a2e04643] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [a2e04643] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [a2e04643] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [53729a30] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [53729a30] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [53729a30] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [d3e2550f] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [d3e2550f] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [d3e2550f] Finished in 0.074 seconds with exit status 0 (successful).
+  INFO [5536ea4c] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [5536ea4c] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [5536ea4c] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [3fe293ef] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [3fe293ef] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [3fe293ef] 	Fetching origin
+  INFO [3fe293ef] Finished in 0.423 seconds with exit status 0 (successful).
+ DEBUG [8bd0f42c] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [8bd0f42c] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [8bd0f42c] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [e1587006] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807025823 on 45.79.135.198
+ DEBUG [e1587006] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807025823 )
+  INFO [e1587006] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [77730a98] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807025823 on 45.79.135.198
+ DEBUG [77730a98] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807025823 )
+  INFO [77730a98] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [3dc994a5] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [3dc994a5] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [3dc994a5] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [168e381a] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [168e381a] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [168e381a] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [168e381a] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [99d88b2a] Running if test ! -d /var/www/nodetest2/releases/20170807025823; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807025823'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [99d88b2a] Command: if test ! -d /var/www/nodetest2/releases/20170807025823; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807025823'" 1>&2; false; fi
+ DEBUG [99d88b2a] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [bface3f1] Running /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION on 45.79.135.198
+ DEBUG [bface3f1] Command: cd /var/www/nodetest2/releases/20170807025823 && /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION
+  INFO [bface3f1] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [f060f07d] Running if test ! -d /var/www/nodetest2/releases/20170807025823; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807025823'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [f060f07d] Command: if test ! -d /var/www/nodetest2/releases/20170807025823; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807025823'" 1>&2; false; fi
+ DEBUG [f060f07d] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [053a605a] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [053a605a] Command: cd /var/www/nodetest2/releases/20170807025823 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [053a605a] Finished in 0.634 seconds with exit status 0 (successful).
+ DEBUG [74f0dfd5] Running if test ! -d /var/www/nodetest2/releases/20170807025823; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807025823'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [74f0dfd5] Command: if test ! -d /var/www/nodetest2/releases/20170807025823; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807025823'" 1>&2; false; fi
+ DEBUG [74f0dfd5] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [222c53f5] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [222c53f5] Command: cd /var/www/nodetest2/releases/20170807025823 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [222c53f5] Finished in 1.173 seconds with exit status 0 (successful).
+  INFO [e92858c0] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807025823 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [e92858c0] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807025823 /var/www/nodetest2/releases/current
+  INFO [e92858c0] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [890c5d25] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [890c5d25] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [890c5d25] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [1c0d5394] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [1c0d5394] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [1c0d5394] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [935a2825] Running /usr/bin/env pm2 jlist  on 45.79.135.198
+ DEBUG [935a2825] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 jlist 
+ DEBUG [935a2825] 	[]
+ DEBUG [935a2825] Finished in 0.442 seconds with exit status 0 (successful).
+  INFO App is not registerd
+ DEBUG [06215059] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [06215059] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [06215059] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [72d26a73] Running /usr/bin/env pm2 stop  on 45.79.135.198
+ DEBUG [72d26a73] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 stop 
+ DEBUG [72d26a73] 	
+ DEBUG [72d26a73] 	  error: missing required argument `id|name|all|json|stdin'
+ DEBUG [72d26a73] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-06 23:01:54 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e168bb1d] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [e168bb1d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e168bb1d] Finished in 0.504 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [a3e26a5c] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [a3e26a5c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [a3e26a5c] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [b1d197e0] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [b1d197e0] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [b1d197e0] 	efe6299d852de72dee2fbf4eef13da62f0013bda	HEAD
+  INFO [b1d197e0] Finished in 0.378 seconds with exit status 0 (successful).
+  INFO [f3c67a98] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [f3c67a98] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [f3c67a98] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [5acefa0c] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [5acefa0c] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [5acefa0c] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [31daf5bf] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [31daf5bf] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [31daf5bf] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [31daf5bf] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [083200e2] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [083200e2] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [083200e2] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [e9e04961] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [e9e04961] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [e9e04961] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [9ea16fc7] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [9ea16fc7] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [9ea16fc7] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [c1a87b81] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [c1a87b81] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c1a87b81] 	Fetching origin
+  INFO [c1a87b81] Finished in 0.377 seconds with exit status 0 (successful).
+ DEBUG [b67c3ab9] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [b67c3ab9] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [b67c3ab9] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [46c988a2] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807030156 on 45.79.135.198
+ DEBUG [46c988a2] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807030156 )
+  INFO [46c988a2] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [fb7035ce] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807030156 on 45.79.135.198
+ DEBUG [fb7035ce] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807030156 )
+  INFO [fb7035ce] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [853df62b] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [853df62b] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [853df62b] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [a75e69cc] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [a75e69cc] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [a75e69cc] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [a75e69cc] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [bb7c8b3f] Running if test ! -d /var/www/nodetest2/releases/20170807030156; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807030156'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [bb7c8b3f] Command: if test ! -d /var/www/nodetest2/releases/20170807030156; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807030156'" 1>&2; false; fi
+ DEBUG [bb7c8b3f] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [d08136d4] Running /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION on 45.79.135.198
+ DEBUG [d08136d4] Command: cd /var/www/nodetest2/releases/20170807030156 && /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION
+  INFO [d08136d4] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [aaa4ad6c] Running if test ! -d /var/www/nodetest2/releases/20170807030156; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807030156'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [aaa4ad6c] Command: if test ! -d /var/www/nodetest2/releases/20170807030156; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807030156'" 1>&2; false; fi
+ DEBUG [aaa4ad6c] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [35816f6d] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [35816f6d] Command: cd /var/www/nodetest2/releases/20170807030156 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [35816f6d] Finished in 0.641 seconds with exit status 0 (successful).
+ DEBUG [c405e820] Running if test ! -d /var/www/nodetest2/releases/20170807030156; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807030156'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [c405e820] Command: if test ! -d /var/www/nodetest2/releases/20170807030156; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807030156'" 1>&2; false; fi
+ DEBUG [c405e820] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [5c75c7a5] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [5c75c7a5] Command: cd /var/www/nodetest2/releases/20170807030156 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [5c75c7a5] Finished in 1.172 seconds with exit status 0 (successful).
+  INFO [33b24336] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807030156 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [33b24336] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807030156 /var/www/nodetest2/releases/current
+  INFO [33b24336] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [3a9e2db8] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [3a9e2db8] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [3a9e2db8] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [acd802c1] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [acd802c1] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [acd802c1] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [14ef1557] Running /usr/bin/env pm2 index  on 45.79.135.198
+ DEBUG [14ef1557] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 index 
+ DEBUG [14ef1557] 	[32m[PM2] [39m
+Command not found
+ DEBUG [14ef1557] 	
+  Usage: pm2 [cmd] app
+
+
+  Options:
+
+    -V, --version                    output the version number
+    -v --version                     get version
+    -s --silent                      hide all messages
+    -m --mini-list                   display a compacted list without formatting
+    -f --force                       force actions
+    --disable-logs                   do not write logs
+    -n --name <name>                 set a <name> for script
+    -i --instances <number>          launch [number] instances (for networked app)(load balanced)
+    --parallel <number>              mumber of parallel actions (for restart/reload)
+    -l --log [path]                  specify entire log file (error and out are both included)
+    -o --output <path>               specify out log file
+    -e --error <path>                specify error log file
+    -p --pid <pid>                   specify pid file
+    -k --kill-timeout <delay>        delay before sending final SIGKILL signal to process
+    --listen-timeout <delay>         listen timeout on application reload
+    --max-memory-restart <memory>    specify max memory amount used to autorestart (in octet or use syntax like 100M)
+    --restart-delay <delay>          specify a delay between restarts (in milliseconds)
+    --env <environment_name>         specify environment to get specific env variables (for JSON declaration)
+    --log-type <type>                specify log output style (raw by default, json optional)
+    -x --execute-command             execute a program using fork system
+    --max-restarts [count]           only restart the script COUNT times
+    -u --user <username>             define user when generating startup script
+    --uid <uid>                      run target script with <uid> rights
+    --gid <gid>                      run target script with <gid> rights
+    --cwd <path>                     run target script as <username>
+    --hp <home path>                 define home path when generating startup script
+    -c --cron <cron_pattern>         restart 
+ DEBUG [14ef1557] 	a running process based on a cron pattern
+    -w --write                       write configuration in local folder
+    --interpreter <interpreter>      the interpreter pm2 should use for executing app (bash, python...)
+    --interpreter-args <arguments>   interpret options (alias of --node-args)
+    --log-date-format <date format>  add custom prefix timestamp to logs
+    --no-daemon                      run pm2 daemon in the foreground if it doesn't exist already
+    -a --update-env                  update environmnent on restart/reload (-a <=> apply)
+    --source-map-support             force source map support
+    --only <application-name>        with json declaration, allow to only act on one application
+    --disable-source-map-support     force source map support
+    --wait-ready                     ask pm2 to wait for ready event from your app
+    --merge-logs                     merge logs from different instances but keep error and out separated
+    --watch [paths]                  watch application folder for changes
+    --ignore-watch <folders|files>   folder/files to be ignored watching, chould be a specific name or regex - e.g. --ignore-watch="test node_modules "some scripts""
+    --node-args <node_args>          space delimited arguments to pass to node in cluster mode - e.g. --node-args="--debug=7001 --trace-deprecation"
+    --no-color                       skip colors
+    --no-vizion                      start an app without vizion feature (versioning control)
+    --no-autorestart                 start an app without automatic restart
+    --no-treekill                    Only kill the main process, not detached children
+    --no-pmx                         start an app without pmx
+    --no-automation                  start an app without pmx
+    --trace                          enable transaction tracing with km
+    --disable-trace                  disable transaction tracing with km
+    --attach                         attach logging after your start/restart/stop/reload
+    -h, --help             
+ DEBUG [14ef1557] 	          output usage information
+
+
+  Commands:
+
+    start [options] <file|json|stdin|app_name|pm_id...>  start and daemonize an app
+    docker:gen [options] <file|config>                   generate Dockerfile in current folder
+    docker:dev [options] <file|config>                   wrap application into Docker container
+    docker:dist [options] <file|config> <image_name>     wrap application into Docker container
+    trigger <proc_name> <action_name> [params]           deploy your json
+    deploy <file|environment>                            deploy your json
+    startOrRestart <json>                                start or restart JSON file
+    startOrReload <json>                                 start or gracefully reload JSON file
+    startOrGracefulReload <json>                         start or gracefully reload JSON file
+    stop [options] <id|name|all|json|stdin...>           stop a process (to start it again, do pm2 restart <app>)
+    restart [options] <id|name|all|json|stdin...>        restart a process
+    scale <app_name> <number>                            scale up/down a process in cluster mode depending on total_number param
+    snapshot                                             snapshot PM2 memory
+    profile <command>                                    profile CPU
+    reload <name|all>                                    reload processes (note that its for app using HTTP/HTTPS)
+    gracefulReload <name|all>                            gracefully reload a process. Send a "shutdown" message to close all connections.
+    id <name>                                            get process id by name
+    delete <name|id|script|all|json|stdin...>            stop and delete a process from pm2 process list
+    sendSignal <signal> <pm2_id|name>                    send a system signal to the target process
+    ping                                                 ping pm2 daemon - if not up it will launch it
+    updatePM2                                            update in-memory PM2 with local PM2
+    updat
+ DEBUG [14ef1557] 	e                                               (alias) update in-memory PM2 with local PM2
+    install|module:install <module|git:/>                install or update a module and run it forever
+    module:update <module|git:/>                         update a module and run it forever
+    module:generate [app_name]                           Generate a sample module in current folder
+    uninstall|module:uninstall <module>                  stop and uninstall a module
+    publish|module:publish                               Publish the module you are currently on
+    set [key] [value]                                    sets the specified config <key> <value>
+    multiset <value>                                     multiset eg "key1 val1 key2 val2
+    get [key]                                            get value for <key>
+    conf [key] [value]                                   get / set module config values
+    config <key> [value]                                 get / set module config values
+    unset <key>                                          clears the specified config <key>
+    report                                               give a full pm2 report for https://github.com/Unitech/pm2/issues
+    link|interact [options] [secret] [public] [name]     linking action to keymetrics.io - command can be stop|info|delete|restart
+    unmonitor [name]                                     unmonitor target process
+    monitor [name]                                       monitor target process
+    open                                                 open dashboard in browser
+    register                                             create an account on keymetrics
+    login                                                login to keymetrics and link current PM2
+    web                                                  launch a health API on 0.0.0.0:9615
+    dump|save                                            dump all processes for resurrecting them later
+    send <pm_id> <line>                                  send stdi
+ DEBUG [14ef1557] 	n to <pm_id>
+    attach <pm_id> [comman]                              attach stdin/stdout to application identified by <pm_id>
+    resurrect                                            resurrect previously dumped processes
+    unstartup [platform]                                 disable and clear auto startup - [platform]=systemd,upstart,launchd,rcd
+    startup [platform]                                   setup script for pm2 at boot - [platform]=systemd,upstart,launchd,rcd
+    logrotate                                            copy default logrotate configuration
+    ecosystem|generate [mode]                            generate a process conf file. (mode = null or simple)
+    reset <name|id|all>                                  reset counters for process
+    describe <id>                                        describe all parameters of a process id
+    desc <id>                                            (alias) describe all parameters of a process id
+    info <id>                                            (alias) describe all parameters of a process id
+    show <id>                                            (alias) describe all parameters of a process id
+    list|ls [options]                                    list all processes
+    l                                                    (alias) list all processes
+    status                                               (alias) list all processes
+    jlist                                                list all processes in JSON format
+    prettylist                                           print json in a prettified JSON
+    monit                                                launch termcaps monitoring
+    imonit                                               launch legacy termcaps monitoring
+    dashboard|dash                                       launch dashboard with monitoring and logs
+    flush                                                flush logs
+    reloadLogs                                           reload all logs
+    logs [options] [id|name]  
+ DEBUG [14ef1557] 	                           stream logs file. Default stream all logs
+    kill                                                 kill daemon
+    pull <name> [commit_id]                              updates repository for a given app
+    forward <name>                                       updates repository to the next commit for a given app
+    backward <name>                                      downgrades repository to the previous commit for a given app
+    gc                                                   force PM2 to trigger garbage collection
+    deepUpdate                                           performs a deep update of PM2
+    serve|expose [path] [port]                           serve a directory over http via port
+    *                                                  
+ DEBUG [14ef1557] 	  Basic Examples:
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Start an app using all CPUs available + set a name :
+ DEBUG [14ef1557] 	    $ pm2 start app.js -i 0 --name "api"
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Restart the previous app launched, by name :
+ DEBUG [14ef1557] 	    $ pm2 restart api
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Stop the app :
+ DEBUG [14ef1557] 	    $ pm2 stop api
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Restart the app that is stopped :
+ DEBUG [14ef1557] 	    $ pm2 restart api
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Remove the app from the process list :
+ DEBUG [14ef1557] 	    $ pm2 delete api
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Kill daemon pm2 :
+ DEBUG [14ef1557] 	    $ pm2 kill
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    Update pm2 :
+ DEBUG [14ef1557] 	    $ npm install pm2@latest -g ; pm2 update
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    More examples in https://github.com/Unitech/pm2#usagefeatures
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	  Deployment help:
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	    $ pm2 deploy help
+ DEBUG [14ef1557] 	
+ DEBUG [14ef1557] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-07 05:26:08 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [48527030] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [48527030] Command: /usr/bin/env mkdir -p /tmp
+  INFO [48527030] Finished in 0.459 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [a054dd2c] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [a054dd2c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [a054dd2c] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [a01686db] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [a01686db] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [a01686db] 	efe6299d852de72dee2fbf4eef13da62f0013bda	HEAD
+  INFO [a01686db] Finished in 0.374 seconds with exit status 0 (successful).
+  INFO [f2e9af22] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [f2e9af22] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [f2e9af22] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [1a7dad2b] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [1a7dad2b] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [1a7dad2b] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [2da41150] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [2da41150] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [2da41150] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [2da41150] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [263d2ec5] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [263d2ec5] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [263d2ec5] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [54ed2304] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [54ed2304] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [54ed2304] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [6acaa069] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [6acaa069] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [6acaa069] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [959e4810] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [959e4810] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [959e4810] 	Fetching origin
+  INFO [959e4810] Finished in 0.382 seconds with exit status 0 (successful).
+ DEBUG [70998c02] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [70998c02] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [70998c02] Finished in 0.072 seconds with exit status 0 (successful).
+  INFO [d1a3116b] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807092609 on 45.79.135.198
+ DEBUG [d1a3116b] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807092609 )
+  INFO [d1a3116b] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [a2ce7200] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807092609 on 45.79.135.198
+ DEBUG [a2ce7200] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807092609 )
+  INFO [a2ce7200] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [c8034ff1] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [c8034ff1] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [c8034ff1] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [58a72e0e] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [58a72e0e] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [58a72e0e] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [58a72e0e] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [f1d611e1] Running if test ! -d /var/www/nodetest2/releases/20170807092609; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807092609'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [f1d611e1] Command: if test ! -d /var/www/nodetest2/releases/20170807092609; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807092609'" 1>&2; false; fi
+ DEBUG [f1d611e1] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [0ebaeb8d] Running /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION on 45.79.135.198
+ DEBUG [0ebaeb8d] Command: cd /var/www/nodetest2/releases/20170807092609 && /usr/bin/env echo "efe6299d852de72dee2fbf4eef13da62f0013bda" >> REVISION
+  INFO [0ebaeb8d] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [ec3bdbd0] Running if test ! -d /var/www/nodetest2/releases/20170807092609; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807092609'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [ec3bdbd0] Command: if test ! -d /var/www/nodetest2/releases/20170807092609; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807092609'" 1>&2; false; fi
+ DEBUG [ec3bdbd0] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [59d1f169] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [59d1f169] Command: cd /var/www/nodetest2/releases/20170807092609 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [59d1f169] Finished in 0.509 seconds with exit status 0 (successful).
+ DEBUG [8d9959b9] Running if test ! -d /var/www/nodetest2/releases/20170807092609; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807092609'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [8d9959b9] Command: if test ! -d /var/www/nodetest2/releases/20170807092609; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807092609'" 1>&2; false; fi
+ DEBUG [8d9959b9] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [c2e31923] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [c2e31923] Command: cd /var/www/nodetest2/releases/20170807092609 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [c2e31923] Finished in 1.172 seconds with exit status 0 (successful).
+  INFO [9d44e520] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807092609 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [9d44e520] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807092609 /var/www/nodetest2/releases/current
+  INFO [9d44e520] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [a18c6c4a] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [a18c6c4a] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [a18c6c4a] Finished in 0.056 seconds with exit status 0 (successful).
+ DEBUG [1c7e4bf3] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [1c7e4bf3] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [1c7e4bf3] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [262f27d3] Running /usr/bin/env pm2 index  on 45.79.135.198
+ DEBUG [262f27d3] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 index 
+ DEBUG [262f27d3] 	[32m[PM2] [39m
+Command not found
+ DEBUG [262f27d3] 	
+  Usage: pm2 [cmd] app
+
+
+  Options:
+
+    -V, --version                    output the version number
+    -v --version                     get version
+    -s --silent                      hide all messages
+    -m --mini-list                   display a compacted list without formatting
+    -f --force                       force actions
+    --disable-logs                   do not write logs
+    -n --name <name>                 set a <name> for script
+    -i --instances <number>          launch [number] instances (for networked app)(load balanced)
+    --parallel <number>              mumber of parallel actions (for restart/reload)
+    -l --log [path]                  specify entire log file (error and out are both included)
+    -o --output <path>               specify out log file
+    -e --error <path>                specify error log file
+    -p --pid <pid>                   specify pid file
+    -k --kill-timeout <delay>        delay before sending final SIGKILL signal to process
+    --listen-timeout <delay>         listen timeout on application reload
+    --max-memory-restart <memory>    specify max memory amount used to autorestart (in octet or use syntax like 100M)
+    --restart-delay <delay>          specify a delay between restarts (in milliseconds)
+    --env <environment_name>         specify environment to get specific env variables (for JSON declaration)
+    --log-type <type>                specify log output style (raw by default, json optional)
+    -x --execute-command             execute a program using fork system
+    --max-restarts [count]           only restart the script COUNT times
+    -u --user <username>             define user when generating startup script
+    --uid <uid>                      run target script with <uid> rights
+    --gid <gid>                      run target script with <gid> rights
+    --cwd <path>                     run target script as <username>
+    --hp <home path>                 define home path when generating startup script
+    -c --cron <cron_pattern>         restart a running process based on a cron pattern
+    -w --write                       write configuration in local folder
+    --interpreter <interpreter>      the interpreter pm2 should use for executing app (bash, python...)
+    --interpreter-args <arguments>   interpret options (alias of --node-args)
+    --log-date-format <date format>  add custom prefix timestamp to logs
+    --no-daemon                      run pm2 daemon in the foreground if it doesn't exist already
+    -a --update-env                  update environmnent on restart/reload (-a <=> apply)
+    --source-map-support             force source map support
+    --only <application-name>        with json declaration, allow to only act on one application
+    --disable-source-map-support     force source map support
+    --wait-ready                     ask pm2 to wait for ready event from your app
+    --merge-logs                     merge logs from different instances but keep error and out separated
+    --watch [paths]                  watch application folder for changes
+    --ignore-watch <folders|files>   folder/files to be ignored watching, chould be a specific name or regex - e.g. --ignore-watch="test node_modules "some scripts""
+    --node-args <node_args>          space delimited arguments to pass to node in cluster mode - e.g. --node-args="--debug=7001 --trace-deprecation"
+    --no-color                       skip colors
+    --no-vizion                      start an app without vizion feature (versioning control)
+    --no-autorestart                 start an app without automatic restart
+    --no-treekill                    Only kill the main process, not detached children
+    --no-pmx                         start an app without pmx
+    --no-automation                  start an app without pmx
+    --trace                          enable transaction tracing with km
+    --disable-trace                  disable transaction tracing with km
+    --attach                         attach logging after yo
+ DEBUG [262f27d3] 	ur start/restart/stop/reload
+    -h, --help                       output usage information
+
+
+  Commands:
+
+    start [options] <file|json|stdin|app_name|pm_id...>  start and daemonize an app
+    docker:gen [options] <file|config>                   generate Dockerfile in current folder
+    docker:dev [options] <file|config>                   wrap application into Docker container
+    docker:dist [options] <file|config> <image_name>     wrap application into Docker container
+    trigger <proc_name> <action_name> [params]           deploy your json
+    deploy <file|environment>                            deploy your json
+    startOrRestart <json>                                start or restart JSON file
+    startOrReload <json>                                 start or gracefully reload JSON file
+    startOrGracefulReload <json>                         start or gracefully reload JSON file
+    stop [options] <id|name|all|json|stdin...>           stop a process (to start it again, do pm2 restart <app>)
+    restart [options] <id|name|all|json|stdin...>        restart a process
+    scale <app_name> <number>                            scale up/down a process in cluster mode depending on total_number param
+    snapshot                                             snapshot PM2 memory
+    profile <command>                                    profile CPU
+    reload <name|all>                                    reload processes (note that its for app using HTTP/HTTPS)
+    gracefulReload <name|all>                            gracefully reload a process. Send a "shutdown" message to close all connections.
+    id <name>                                            get process id by name
+    delete <name|id|script|all|json|stdin...>            stop and delete a process from pm2 process list
+    sendSignal <signal> <pm2_id|name>                    send a system signal to the target process
+    ping                                                 ping pm2 daemon - if not up it will launch it
+    updatePM2                                            update in-memory PM2 with local PM2
+    update                                               (alias) update in-memory PM2 with local PM2
+    install|module:install <module|git:/>                install or update a module and run it forever
+    module:update <module|git:/>                         update a module and run it forever
+    module:generate [app_name]                           Generate a sample module in current folder
+    uninstall|module:uninstall <module>                  stop and uninstall a module
+    publish|module:publish                               Publish the module you are currently on
+    set [key] [value]                                    sets the specified config <key> <value>
+    multiset <value>                                     multiset eg "key1 val1 key2 val2
+    get [key]                                            get value for <key>
+    conf [key] [value]                                   get / set module config values
+    config <key> [value]                                 get / set module config values
+    unset <key>                                          clears the specified config <key>
+    report                                               give a full pm2 report for https://github.com/Unitech/pm2/issues
+    link|interact [options] [secret] [public] [name]     linking action to keymetrics.io - command can be stop|info|delete|restart
+    unmonitor [name]                                     unmonitor target process
+    monitor [name]                                       monitor target process
+    open                                                 open dashboard in browser
+    register                                             create an account on keymetrics
+    login                                                login to keymetrics and link current PM2
+    web                                                  launch a health API on 0.0.0.0:9615
+    dump|save                                            dump all 
+ DEBUG [262f27d3] 	processes for resurrecting them later
+    send <pm_id> <line>                                  send stdin to <pm_id>
+    attach <pm_id> [comman]                              attach stdin/stdout to application identified by <pm_id>
+    resurrect                                            resurrect previously dumped processes
+    unstartup [platform]                                 disable and clear auto startup - [platform]=systemd,upstart,launchd,rcd
+    startup [platform]                                   setup script for pm2 at boot - [platform]=systemd,upstart,launchd,rcd
+    logrotate                                            copy default logrotate configuration
+    ecosystem|generate [mode]                            generate a process conf file. (mode = null or simple)
+    reset <name|id|all>                                  reset counters for process
+    describe <id>                                        describe all parameters of a process id
+    desc <id>                                            (alias) describe all parameters of a process id
+    info <id>                                            (alias) describe all parameters of a process id
+    show <id>                                            (alias) describe all parameters of a process id
+    list|ls [options]                                    list all processes
+    l                                                    (alias) list all processes
+    status                                               (alias) list all processes
+    jlist                                                list all processes in JSON format
+    prettylist                                           print json in a prettified JSON
+    monit                                                launch termcaps monitoring
+    imonit                                               launch legacy termcaps monitoring
+    dashboard|dash                                       launch dashboard with monitoring and logs
+    flush                                                flush logs
+    reloadLogs                                           reload all logs
+    logs [options] [id|name]                             stream logs file. Default stream all logs
+    kill                                                 kill daemon
+    pull <name> [commit_id]                              updates repository for a given app
+    forward <name>                                       updates repository to the next commit for a given app
+    backward <name>                                      downgrades repository to the previous commit for a given app
+    gc                                                   force PM2 to trigger garbage collection
+    deepUpdate                                           performs a deep update of PM2
+    serve|expose [path] [port]                           serve a directory over http via port
+    *                                                  
+ DEBUG [262f27d3] 	  Basic Examples:
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Start an app using all CPUs available + set a name :
+ DEBUG [262f27d3] 	    $ pm2 start app.js -i 0 --name "api"
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Restart the previous app launched, by name :
+ DEBUG [262f27d3] 	    $ pm2 restart api
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Stop the app :
+ DEBUG [262f27d3] 	    $ pm2 stop api
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Restart the app that is stopped :
+ DEBUG [262f27d3] 	    $ pm2 restart api
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Remove the app from the process list :
+ DEBUG [262f27d3] 	    $ pm2 delete api
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Kill daemon pm2 :
+ DEBUG [262f27d3] 	    $ pm2 kill
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    Update pm2 :
+ DEBUG [262f27d3] 	    $ npm install pm2@latest -g ; pm2 update
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    More examples in https://github.com/Unitech/pm2#usagefeatures
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	  Deployment help:
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	    $ pm2 deploy help
+ DEBUG [262f27d3] 	
+ DEBUG [262f27d3] 	
