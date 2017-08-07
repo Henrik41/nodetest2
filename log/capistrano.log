@@ -4711,3 +4711,239 @@ Command not found
  DEBUG [262f27d3] 	    $ pm2 deploy help
  DEBUG [262f27d3] 	
  DEBUG [262f27d3] 	
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-07 05:39:07 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [52624eed] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [52624eed] Command: /usr/bin/env mkdir -p /tmp
+  INFO [52624eed] Finished in 0.502 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [0b0e0cfe] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [0b0e0cfe] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [0b0e0cfe] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [14438a66] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [14438a66] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [14438a66] 	c932f9677f4d4eb4323ab95d0b8800eb90c086b1	HEAD
+  INFO [14438a66] Finished in 0.372 seconds with exit status 0 (successful).
+  INFO [dd2f59ae] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [dd2f59ae] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [dd2f59ae] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [9a0dfc69] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [9a0dfc69] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [9a0dfc69] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [eb852e90] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [eb852e90] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [eb852e90] 	efe6299d852de72dee2fbf4eef13da62f0013bda
+ DEBUG [eb852e90] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [ac8168a7] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [ac8168a7] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [ac8168a7] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [ed6c1606] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [ed6c1606] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [ed6c1606] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [25bb3a43] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [25bb3a43] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [25bb3a43] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [42efdfe7] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [42efdfe7] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [42efdfe7] 	Fetching origin
+ DEBUG [42efdfe7] 	remote: Counting objects: 15, done.[K
+remote: Compressing objects:  20% (1/5)   [Kremote: Compressing objects:  40% (2/5)   [Kremote: Compressing objects:  60% (3/5)   [Kremote: Compressing objects:  80% (4/5)   [Kremote: Compressing objects: 100% (5/5)   [Kremote: Compressing objects: 100% (5/5), done.[K
+remote: Total 15 (delta 7), reused 15 (delta 7), pack-reused 0[K
+ DEBUG [42efdfe7] 	Unpacking objects:   6% (1/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  13% (2/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  20% (3/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  26% (4/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  33% (5/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  40% (6/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  46% (7/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  53% (8/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  60% (9/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  66% (10/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  73% (11/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  80% (12/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  86% (13/15)   
+ DEBUG [42efdfe7] 	Unpacking objects:  93% (14/15)   
+ DEBUG [42efdfe7] 	Unpacking objects: 100% (15/15)   Unpacking objects: 100% (15/15), done.
+ DEBUG [42efdfe7] 	From github.com:Henrik41/nodetest2
+   efe6299..c932f96  master     -> master
+  INFO [42efdfe7] Finished in 0.457 seconds with exit status 0 (successful).
+ DEBUG [b06558ce] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [b06558ce] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [b06558ce] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [21b64efa] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807093908 on 45.79.135.198
+ DEBUG [21b64efa] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807093908 )
+  INFO [21b64efa] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [30856976] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807093908 on 45.79.135.198
+ DEBUG [30856976] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807093908 )
+  INFO [30856976] Finished in 0.079 seconds with exit status 0 (successful).
+ DEBUG [93dab0e3] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [93dab0e3] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [93dab0e3] Finished in 0.051 seconds with exit status 0 (successful).
+ DEBUG [819ef796] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [819ef796] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [819ef796] 	c932f9677f4d4eb4323ab95d0b8800eb90c086b1
+ DEBUG [819ef796] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [665bfe9f] Running if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [665bfe9f] Command: if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi
+ DEBUG [665bfe9f] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [a9fed918] Running /usr/bin/env echo "c932f9677f4d4eb4323ab95d0b8800eb90c086b1" >> REVISION on 45.79.135.198
+ DEBUG [a9fed918] Command: cd /var/www/nodetest2/releases/20170807093908 && /usr/bin/env echo "c932f9677f4d4eb4323ab95d0b8800eb90c086b1" >> REVISION
+  INFO [a9fed918] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [6126e191] Running if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [6126e191] Command: if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi
+ DEBUG [6126e191] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [848e88ba] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [848e88ba] Command: cd /var/www/nodetest2/releases/20170807093908 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [848e88ba] Finished in 3.035 seconds with exit status 0 (successful).
+ DEBUG [bba35cb7] Running if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [bba35cb7] Command: if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi
+ DEBUG [bba35cb7] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [29b04455] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [29b04455] Command: cd /var/www/nodetest2/releases/20170807093908 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [29b04455] Finished in 1.034 seconds with exit status 0 (successful).
+  INFO [4ec8e8b7] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807093908 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [4ec8e8b7] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807093908 /var/www/nodetest2/releases/current
+  INFO [4ec8e8b7] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [bb6ac4e4] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [bb6ac4e4] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [bb6ac4e4] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [b41e085e] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [b41e085e] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [b41e085e] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [b30f71a9] Running /usr/bin/env pm2 jlist on 45.79.135.198
+ DEBUG [b30f71a9] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 jlist
+ DEBUG [b30f71a9] 	[]
+ DEBUG [b30f71a9] Finished in 0.751 seconds with exit status 0 (successful).
+  INFO App is not registerd
+ DEBUG [7737c596] Running if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [7737c596] Command: if test ! -d /var/www/nodetest2/releases/20170807093908; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807093908'" 1>&2; false; fi
+ DEBUG [7737c596] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [cf5355a5] Running /usr/bin/env pm2 start main.js --name nodetest2  on 45.79.135.198
+ DEBUG [cf5355a5] Command: cd /var/www/nodetest2/releases/20170807093908 && /usr/bin/env pm2 start main.js --name nodetest2 
+ DEBUG [cf5355a5] 	[31m[PM2][ERROR] [39mscript not found : /var/www/nodetest2/releases/20170807093908/main.js
+ DEBUG [cf5355a5] 	script not found : /var/www/nodetest2/releases/20170807093908/main.js
+ DEBUG [cf5355a5] 	[90m┌──────┬──────┬────────┬───┬─────┬────────┐[39m
+[90m│[39m[1m[36m Name [39m[22m[90m│[39m[1m[36m mode [39m[22m[90m│[39m[1m[36m status [39m[22m[90m│[39m[1m[36m ↺ [39m[22m[90m│[39m[1m[36m cpu [39m[22m[90m│[39m[1m[36m memory [39m[22m[90m│[39m
+[90m└──────┴──────┴────────┴───┴─────┴────────┘[39m
+ DEBUG [cf5355a5] 	[37m[3m Use `pm2 show <id|name>` to get more details about an app[23m[39m
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-08-07 05:40:18 -0400 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1a393f0f] Running /usr/bin/env mkdir -p /tmp on 45.79.135.198
+ DEBUG [1a393f0f] Command: /usr/bin/env mkdir -p /tmp
+  INFO [1a393f0f] Finished in 0.446 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 0.0%
+  INFO Uploading /tmp/git-ssh-nodetest2-production-henriknafo.sh 100.0%
+  INFO [d25d2891] Running /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh on 45.79.135.198
+ DEBUG [d25d2891] Command: /usr/bin/env chmod 700 /tmp/git-ssh-nodetest2-production-henriknafo.sh
+  INFO [d25d2891] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [81f31e3b] Running /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD on 45.79.135.198
+ DEBUG [81f31e3b] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git ls-remote git@github.com:Henrik41/nodetest2.git HEAD )
+ DEBUG [81f31e3b] 	c932f9677f4d4eb4323ab95d0b8800eb90c086b1	HEAD
+  INFO [81f31e3b] Finished in 0.369 seconds with exit status 0 (successful).
+  INFO [322976bd] Running /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [322976bd] Command: /usr/bin/env mkdir -p /var/www/nodetest2/shared /var/www/nodetest2/releases
+  INFO [322976bd] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [7f8484fb] Running [ -f /var/www/nodetest2/current/REVISION ] on 45.79.135.198
+ DEBUG [7f8484fb] Command: [ -f /var/www/nodetest2/current/REVISION ]
+ DEBUG [7f8484fb] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [8402e5d9] Running /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null on 45.79.135.198
+ DEBUG [8402e5d9] Command: /usr/bin/env cat /var/www/nodetest2/current/REVISION 2>/dev/null
+ DEBUG [8402e5d9] 	c932f9677f4d4eb4323ab95d0b8800eb90c086b1
+ DEBUG [8402e5d9] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [c7e7c202] Running [ -f /var/www/nodetest2/repo/HEAD ] on 45.79.135.198
+ DEBUG [c7e7c202] Command: [ -f /var/www/nodetest2/repo/HEAD ]
+ DEBUG [c7e7c202] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/nodetest2/repo
+ DEBUG [df5aa597] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [df5aa597] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [df5aa597] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [c6849f8b] Running /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git on 45.79.135.198
+ DEBUG [c6849f8b] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote set-url origin git@github.com:Henrik41/nodetest2.git )
+  INFO [c6849f8b] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [97d5e041] Running /usr/bin/env git remote update --prune on 45.79.135.198
+ DEBUG [97d5e041] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [97d5e041] 	Fetching origin
+  INFO [97d5e041] Finished in 0.375 seconds with exit status 0 (successful).
+ DEBUG [3ace775a] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [3ace775a] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [3ace775a] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [744d1f7c] Running /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807094019 on 45.79.135.198
+ DEBUG [744d1f7c] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env mkdir -p /var/www/nodetest2/releases/20170807094019 )
+  INFO [744d1f7c] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [7173ae03] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807094019 on 45.79.135.198
+ DEBUG [7173ae03] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/nodetest2/releases/20170807094019 )
+  INFO [7173ae03] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [41cebab8] Running if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [41cebab8] Command: if test ! -d /var/www/nodetest2/repo; then echo "Directory does not exist '/var/www/nodetest2/repo'" 1>&2; false; fi
+ DEBUG [41cebab8] Finished in 0.053 seconds with exit status 0 (successful).
+ DEBUG [b8f5859b] Running /usr/bin/env git rev-list --max-count=1 master on 45.79.135.198
+ DEBUG [b8f5859b] Command: cd /var/www/nodetest2/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-nodetest2-production-henriknafo.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [b8f5859b] 	c932f9677f4d4eb4323ab95d0b8800eb90c086b1
+ DEBUG [b8f5859b] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [a7c99a8e] Running if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [a7c99a8e] Command: if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi
+ DEBUG [a7c99a8e] Finished in 0.058 seconds with exit status 0 (successful).
+  INFO [a9b413f8] Running /usr/bin/env echo "c932f9677f4d4eb4323ab95d0b8800eb90c086b1" >> REVISION on 45.79.135.198
+ DEBUG [a9b413f8] Command: cd /var/www/nodetest2/releases/20170807094019 && /usr/bin/env echo "c932f9677f4d4eb4323ab95d0b8800eb90c086b1" >> REVISION
+  INFO [a9b413f8] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [6bfabf29] Running if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [6bfabf29] Command: if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi
+ DEBUG [6bfabf29] Finished in 0.054 seconds with exit status 0 (successful).
+  INFO [e7504138] Running /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet on 45.79.135.198
+ DEBUG [e7504138] Command: cd /var/www/nodetest2/releases/20170807094019 && /usr/bin/env bundle install --path /var/www/nodetest2/shared/bundle --without development test --deployment --quiet
+  INFO [e7504138] Finished in 0.630 seconds with exit status 0 (successful).
+ DEBUG [609fa607] Running if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [609fa607] Command: if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi
+ DEBUG [609fa607] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [80a2cb71] Running /usr/bin/env npm install --production --silent --no-progress on 45.79.135.198
+ DEBUG [80a2cb71] Command: cd /var/www/nodetest2/releases/20170807094019 && /usr/bin/env npm install --production --silent --no-progress
+  INFO [80a2cb71] Finished in 1.176 seconds with exit status 0 (successful).
+  INFO [4f00bf40] Running /usr/bin/env ln -s /var/www/nodetest2/releases/20170807094019 /var/www/nodetest2/releases/current on 45.79.135.198
+ DEBUG [4f00bf40] Command: /usr/bin/env ln -s /var/www/nodetest2/releases/20170807094019 /var/www/nodetest2/releases/current
+  INFO [4f00bf40] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [28d5ccf7] Running /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2 on 45.79.135.198
+ DEBUG [28d5ccf7] Command: /usr/bin/env mv /var/www/nodetest2/releases/current /var/www/nodetest2
+  INFO [28d5ccf7] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [173c454a] Running if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [173c454a] Command: if test ! -d /var/www/nodetest2/current; then echo "Directory does not exist '/var/www/nodetest2/current'" 1>&2; false; fi
+ DEBUG [173c454a] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [385ac1ea] Running /usr/bin/env pm2 jlist on 45.79.135.198
+ DEBUG [385ac1ea] Command: cd /var/www/nodetest2/current && /usr/bin/env pm2 jlist
+ DEBUG [385ac1ea] 	[]
+ DEBUG [385ac1ea] Finished in 0.441 seconds with exit status 0 (successful).
+  INFO App is not registerd
+ DEBUG [87816aec] Running if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [87816aec] Command: if test ! -d /var/www/nodetest2/releases/20170807094019; then echo "Directory does not exist '/var/www/nodetest2/releases/20170807094019'" 1>&2; false; fi
+ DEBUG [87816aec] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [6352a532] Running /usr/bin/env pm2 start index.js --name nodetest2  on 45.79.135.198
+ DEBUG [6352a532] Command: cd /var/www/nodetest2/releases/20170807094019 && /usr/bin/env pm2 start index.js --name nodetest2 
+ DEBUG [6352a532] 	[32m[PM2] [39mStarting /var/www/nodetest2/releases/20170807094019/index.js in fork_mode (1 instance)
+ DEBUG [6352a532] 	[32m[PM2] [39mDone.
+ DEBUG [6352a532] 	[90m┌───────────┬──────┬────────┬───┬─────┬───────────┐[39m
+[90m│[39m[1m[36m Name      [39m[22m[90m│[39m[1m[36m mode [39m[22m[90m│[39m[1m[36m status [39m[22m[90m│[39m[1m[36m ↺ [39m[22m[90m│[39m[1m[36m cpu [39m[22m[90m│[39m[1m[36m memory    [39m[22m[90m│[39m
+[90m├───────────┼──────┼────────┼───┼─────┼───────────┤[39m
+[90m│[39m[1m[36m [1m[36mnodetest2[36m[1m [39m[22m[90m│[39m [7m[1mfork[22m[27m [90m│[39m [32m[1monline[22m[39m [90m│[39m 0 [90m│[39m 0%  [90m│[39m 12.3 MB   [90m│[39m
+[90m└───────────┴──────┴────────┴───┴─────┴───────────┘[39m
+ DEBUG [6352a532] 	[37m[3m Use `pm2 show <id|name>` to get more details about an app[23m[39m
+  INFO [6352a532] Finished in 0.561 seconds with exit status 0 (successful).
+ DEBUG [9699b386] Running /usr/bin/env ls -x /var/www/nodetest2/releases on 45.79.135.198
+ DEBUG [9699b386] Command: /usr/bin/env ls -x /var/www/nodetest2/releases
+ DEBUG [9699b386] 	20170802220756	20170803022448	20170803022619	20170804004412	20170804211434
+ DEBUG [9699b386] 	20170804211642	20170806121305	20170806121717	20170806122104	20170806122707
+ DEBUG [9699b386] 	20170806123044	20170806124518	20170806124913	20170807020657	20170807022655
+ DEBUG [9699b386] 	20170807025823	20170807030156	20170807092609	20170807093908	20170807094019
+ DEBUG [9699b386] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 20 deployed releases on 45.79.135.198
+  INFO [e588d8b3] Running /usr/bin/env rm -rf /var/www/nodetest2/releases/20170802220756 /var/www/nodetest2/releases/20170803022448 /var/www/nodetest2/releases/20170803022619 /var/www/nodetest2/releases/20170804004412 /var/www/nodetest2/releases/20170804211434 /var/www/nodetest2/releases/20170804211642 /var/www/nodetest2/releases/20170806121305 /var/www/nodetest2/releases/20170806121717 /var/www/nodetest2/releases/20170806122104 /var/www/nodetest2/releases/20170806122707 /var/www/nodetest2/releases/20170806123044 /var/www/nodetest2/releases/20170806124518 /var/www/nodetest2/releases/20170806124913 /var/www/nodetest2/releases/20170807020657 /var/www/nodetest2/releases/20170807022655 on 45.79.135.198
+ DEBUG [e588d8b3] Command: /usr/bin/env rm -rf /var/www/nodetest2/releases/20170802220756 /var/www/nodetest2/releases/20170803022448 /var/www/nodetest2/releases/20170803022619 /var/www/nodetest2/releases/20170804004412 /var/www/nodetest2/releases/20170804211434 /var/www/nodetest2/releases/20170804211642 /var/www/nodetest2/releases/20170806121305 /var/www/nodetest2/releases/20170806121717 /var/www/nodetest2/releases/20170806122104 /var/www/nodetest2/releases/20170806122707 /var/www/nodetest2/releases/20170806123044 /var/www/nodetest2/releases/20170806124518 /var/www/nodetest2/releases/20170806124913 /var/www/nodetest2/releases/20170807020657 /var/www/nodetest2/releases/20170807022655
+  INFO [e588d8b3] Finished in 0.157 seconds with exit status 0 (successful).
+ DEBUG [ca5d2bce] Running if test ! -d /var/www/nodetest2/releases; then echo "Directory does not exist '/var/www/nodetest2/releases'" 1>&2; false; fi on 45.79.135.198
+ DEBUG [ca5d2bce] Command: if test ! -d /var/www/nodetest2/releases; then echo "Directory does not exist '/var/www/nodetest2/releases'" 1>&2; false; fi
+ DEBUG [ca5d2bce] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [0eab47ad] Running /usr/bin/env echo "Branch master (at c932f9677f4d4eb4323ab95d0b8800eb90c086b1) deployed as release 20170807094019 by henriknafo" >> /var/www/nodetest2/revisions.log on 45.79.135.198
+ DEBUG [0eab47ad] Command: cd /var/www/nodetest2/releases && /usr/bin/env echo "Branch master (at c932f9677f4d4eb4323ab95d0b8800eb90c086b1) deployed as release 20170807094019 by henriknafo" >> /var/www/nodetest2/revisions.log
+  INFO [0eab47ad] Finished in 0.059 seconds with exit status 0 (successful).
