@@ -4,13 +4,13 @@ require 'json'
 namespace :pm2 do
   def start_app
     within current_path do
-      execute :pm2, :start, fetch(:app_command) + 'index.js'
+      execute :pm2, :start, fetch(:app_command) 
     end
   end
 
   def restart_app
     within current_path do
-      execute :pm2, :restart, fetch(:app_command) + 'index.js'
+      execute :pm2, :restart, fetch(:app_command)
     end
   end
 
