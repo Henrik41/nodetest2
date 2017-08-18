@@ -5,7 +5,7 @@ server '45.79.135.198', roles: [:web, :app], primary: true
 
 
 set :repo_url,        'git@github.com:Henrik41/nodetest2.git'
-set :application,     'nodetest2'
+set :application,     'index'
 set :user,            'bob'
 
 ## Don't change these unless you know what you're doing

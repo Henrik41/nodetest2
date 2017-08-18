@@ -3,4 +3,6 @@
 3. Create a github directory
 3. follow instructions ... git init, etc..
 4. npm init
-5.  
+5. then you need to install capistrano::pm2
+6. add pm2 to your server
+ 
